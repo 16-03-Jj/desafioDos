@@ -1,0 +1,10 @@
+release/Equipo.o
+release/EstadisticasEquipo.o
+release/EstadisticasJugador.o
+release/GestorArchivos.o
+release/Grupo.o
+release/Jugador.o
+release/Partido.o
+release/ResPartidoEquipo.o
+release/Torneo.o
+release/main.o
