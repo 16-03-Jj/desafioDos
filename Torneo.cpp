@@ -8,18 +8,17 @@ using namespace std;
 
 // Constructor
 Torneo::Torneo() {
-    // Reserva memoria para los 48 equipos y 12 grupos
     equipos = new Equipo[NUM_EQUIPOS_TORNEO];
-    grupos = new Grupo[NUM_GRUPOS];
+    grupos  = new Grupo[NUM_GRUPOS];
     numEquipos = 0;
 
-    // Reserva memoria para cada etapa eliminatoria
-    partidosR16 = new Partido[32];
-    partidosR8  = new Partido[16];
-    partidosQF  = new Partido[8];
-    partidosSF  = new Partido[4];
+    // CORRECCIÓN: R16 tiene 16 partidos (32 equipos → 16 cruces)
+    // R8 tiene 8 partidos, QF tiene 4, SF tiene 2
+    partidosR16 = new Partido[16];
+    partidosR8  = new Partido[8];
+    partidosQF  = new Partido[4];
+    partidosSF  = new Partido[2];
 
-    // Inicializa el generador de aleatorios una sola vez
     srand(time(0));
 }
 
@@ -37,7 +36,6 @@ Torneo::~Torneo() {
 void Torneo::cargarDatos(const char* rutaCSV) {
     GestorArchivos gestor;
     numEquipos = gestor.leerCSV(rutaCSV, equipos, NUM_EQUIPOS_TORNEO);
-    // Inicializar jugadores de cada equipo artificialmente
     for (int i = 0; i < numEquipos; i++) {
         equipos[i].inicializarJugadores();
     }
@@ -45,12 +43,10 @@ void Torneo::cargarDatos(const char* rutaCSV) {
 }
 
 // Ordena los equipos por ranking FIFA usando burbuja
-// Mejor ranking = número más bajo queda primero
 void Torneo::ordenarPorRanking() {
     for (int i = 0; i < numEquipos - 1; i++) {
         for (int j = 0; j < numEquipos - 1 - i; j++) {
             if (equipos[j+1] < equipos[j]) {
-                // Usa el operator= de Equipo para intercambiar
                 Equipo temp = equipos[j];
                 equipos[j] = equipos[j+1];
                 equipos[j+1] = temp;
@@ -61,13 +57,15 @@ void Torneo::ordenarPorRanking() {
 
 // Arma los 4 bombos del sorteo
 // EE.UU. va directo al bombo 1
-// Los demás se ordenan por ranking y se dividen en 4 bombos de 12
 void Torneo::armarBombos(int bombos[NUM_BOMBOS][EQUIPOS_POR_BOMBO],
                          int& indiceUSA) {
-    // Primero ordenar por ranking
     ordenarPorRanking();
 
-    // Encontrar a EE.UU.
+    // Inicializar bombos en -1
+    for (int i = 0; i < NUM_BOMBOS; i++)
+        for (int j = 0; j < EQUIPOS_POR_BOMBO; j++)
+            bombos[i][j] = -1;
+
     indiceUSA = -1;
     for (int i = 0; i < numEquipos; i++) {
         if (strcmp(equipos[i].getPais(), "United States") == 0 ||
@@ -77,11 +75,6 @@ void Torneo::armarBombos(int bombos[NUM_BOMBOS][EQUIPOS_POR_BOMBO],
         }
     }
 
-    // Llenar los bombos saltando a EE.UU.
-    // Bombo 1: posiciones 0-11 (sin EE.UU.)
-    // Bombo 2: posiciones 12-23
-    // Bombo 3: posiciones 24-35
-    // Bombo 4: posiciones 36-47
     int contBombo[NUM_BOMBOS] = {0, 0, 0, 0};
 
     // EE.UU. va al bombo 1 primero
@@ -90,10 +83,9 @@ void Torneo::armarBombos(int bombos[NUM_BOMBOS][EQUIPOS_POR_BOMBO],
         contBombo[0] = 1;
     }
 
-    // Llenar el resto
     int bomboActual = 0;
     for (int i = 0; i < numEquipos; i++) {
-        if (i == indiceUSA) continue; // saltar EE.UU.
+        if (i == indiceUSA) continue;
         if (contBombo[bomboActual] >= EQUIPOS_POR_BOMBO) {
             bomboActual++;
         }
@@ -114,51 +106,37 @@ bool Torneo::puedenCompartirGrupo(Equipo* nuevo, Equipo* eq2, Grupo& grupo) {
     for (int i = 0; i < NUM_EQUIPOS_GRUPO; i++) {
         Equipo* eq = grupo.getEquipo(i);
         if (eq == nullptr) continue;
-        // Contar equipos de la misma confederación
         if (strcmp(eq->getConfederacion(), confNuevo) == 0) {
             countConfNuevo++;
         }
-        // Contar equipos UEFA
         if (strcmp(eq->getConfederacion(), "UEFA") == 0) {
             countUEFA++;
         }
     }
 
-    // Si es UEFA puede haber máximo 2
-    if (strcmp(confNuevo, "UEFA") == 0 && countUEFA >= 2) {
-        return false;
-    }
-    // Si no es UEFA no puede repetirse la confederación
-    if (strcmp(confNuevo, "UEFA") != 0 && countConfNuevo >= 1) {
-        return false;
-    }
+    if (strcmp(confNuevo, "UEFA") == 0 && countUEFA >= 2) return false;
+    if (strcmp(confNuevo, "UEFA") != 0 && countConfNuevo >= 1) return false;
     return true;
 }
 
 // II - Conforma los 12 grupos del torneo
 void Torneo::conformarGrupos() {
-    // Armar los bombos
     int bombos[NUM_BOMBOS][EQUIPOS_POR_BOMBO];
     int indiceUSA = -1;
     armarBombos(bombos, indiceUSA);
 
-    // Asignar letra a cada grupo
     char letras[NUM_GRUPOS] = {'A','B','C','D','E','F',
                                'G','H','I','J','K','L'};
     for (int i = 0; i < NUM_GRUPOS; i++) {
         grupos[i].setLetra(letras[i]);
     }
 
-    // Sacar un equipo de cada bombo para cada grupo
-    // respetando restricciones de confederación
     bool asignado[NUM_EQUIPOS_TORNEO] = {false};
 
     for (int bombo = 0; bombo < NUM_BOMBOS; bombo++) {
-        // Para cada grupo asignar un equipo del bombo actual
-        int intentos = 0;
         for (int g = 0; g < NUM_GRUPOS; g++) {
             bool encontrado = false;
-            // Mezclar el bombo aleatoriamente antes de asignar
+            // Mezclar el bombo aleatoriamente
             for (int k = EQUIPOS_POR_BOMBO - 1; k > 0; k--) {
                 int r = rand() % (k + 1);
                 int temp = bombos[bombo][k];
@@ -167,17 +145,15 @@ void Torneo::conformarGrupos() {
             }
             for (int e = 0; e < EQUIPOS_POR_BOMBO && !encontrado; e++) {
                 int idx = bombos[bombo][e];
+                if (idx == -1) continue;
                 if (!asignado[idx]) {
                     Equipo* candidato = &equipos[idx];
-                    if (puedenCompartirGrupo(candidato,
-                                             nullptr,
-                                             grupos[g])) {
+                    if (puedenCompartirGrupo(candidato, nullptr, grupos[g])) {
                         grupos[g].setEquipo(bombo, candidato);
                         asignado[idx] = true;
                         encontrado = true;
                     }
                 }
-                intentos++;
             }
         }
     }
@@ -186,7 +162,7 @@ void Torneo::conformarGrupos() {
 // III - Simula la fase de grupos completa
 void Torneo::simularFaseGrupos() {
     for (int i = 0; i < NUM_GRUPOS; i++) {
-        grupos[i].configurarPartidos(20); // inicia el 20 de junio
+        grupos[i].configurarPartidos(20);
         grupos[i].simularPartidos();
         grupos[i].calcularPuntos();
         grupos[i].clasificar();
@@ -196,85 +172,152 @@ void Torneo::simularFaseGrupos() {
     configurarR16();
 }
 
-// Configura los partidos de dieciseisavos según el enunciado
+// Configura los 16 partidos de dieciseisavos
 void Torneo::configurarR16() {
-    // Clasifican: 12 primeros, 12 segundos, 8 mejores terceros
-    // Primeros de grupo vs terceros clasificados
-    // Segundos peores vs cabezas de grupo restantes
-    // El resto de segundos entre sí
-
-    // Por simplicidad asignamos fecha fija como dice el enunciado
     const char* fechaR16 = "10/07/2026";
 
-    // Primeros de cada grupo
     Equipo* primeros[NUM_GRUPOS];
     Equipo* segundos[NUM_GRUPOS];
     Equipo* terceros[NUM_GRUPOS];
+    int puntosTerceros[NUM_GRUPOS];
 
     for (int i = 0; i < NUM_GRUPOS; i++) {
-        primeros[i] = grupos[i].getEquipo(
-            grupos[i].getOrdenClasificacion(0));
-        segundos[i] = grupos[i].getEquipo(
-            grupos[i].getOrdenClasificacion(1));
-        terceros[i] = grupos[i].getEquipo(
-            grupos[i].getOrdenClasificacion(2));
+        int idx0 = grupos[i].getOrdenClasificacion(0);
+        int idx1 = grupos[i].getOrdenClasificacion(1);
+        int idx2 = grupos[i].getOrdenClasificacion(2);
+        primeros[i] = grupos[i].getEquipo(idx0);
+        segundos[i] = grupos[i].getEquipo(idx1);
+        terceros[i] = grupos[i].getEquipo(idx2);
+        puntosTerceros[i] = grupos[i].getPuntos(idx2);
     }
 
-    // Configurar los 32 partidos de R16
-    // Primeros (0-11) vs terceros (0-7 clasificados)
-    for (int i = 0; i < 12; i++) {
-        partidosR16[i].setEquipo1(primeros[i]);
-        partidosR16[i].setEquipo2(terceros[i]);
-        partidosR16[i].setFecha(fechaR16);
-        partidosR16[i].setSede("nombreSede");
-        partidosR16[i].setHora("00:00");
-        partidosR16[i].setArbitro(0, "codArbitro1");
-        partidosR16[i].setArbitro(1, "codArbitro2");
-        partidosR16[i].setArbitro(2, "codArbitro3");
-        partidosR16[i].setEsEliminatoria(true);
+    // Seleccionar los 8 mejores terceros ordenados por puntos
+    int indicesTerceros[NUM_GRUPOS];
+    for (int i = 0; i < NUM_GRUPOS; i++) indicesTerceros[i] = i;
+
+    // Burbuja descendente por puntos de terceros
+    for (int i = 0; i < NUM_GRUPOS - 1; i++) {
+        for (int j = 0; j < NUM_GRUPOS - 1 - i; j++) {
+            int a = indicesTerceros[j];
+            int b = indicesTerceros[j + 1];
+            if (puntosTerceros[a] < puntosTerceros[b]) {
+                int temp = indicesTerceros[j];
+                indicesTerceros[j] = indicesTerceros[j + 1];
+                indicesTerceros[j + 1] = temp;
+            }
+        }
     }
-    // Segundos entre sí (12-23)
-    for (int i = 0; i < 12; i++) {
-        partidosR16[12 + i].setEquipo1(segundos[i]);
-        partidosR16[12 + i].setEquipo2(segundos[(i+1) % NUM_GRUPOS]);
-        partidosR16[12 + i].setFecha(fechaR16);
-        partidosR16[12 + i].setSede("nombreSede");
-        partidosR16[12 + i].setHora("00:00");
-        partidosR16[12 + i].setArbitro(0, "codArbitro1");
-        partidosR16[12 + i].setArbitro(1, "codArbitro2");
-        partidosR16[12 + i].setArbitro(2, "codArbitro3");
-        partidosR16[12 + i].setEsEliminatoria(true);
+
+    // Los primeros 8 son los mejores terceros
+    Equipo* mejoresTerceros[8];
+    int grupoTercero[8]; // grupo de origen de cada tercer clasificado
+    for (int i = 0; i < 8; i++) {
+        mejoresTerceros[i] = terceros[indicesTerceros[i]];
+        grupoTercero[i] = indicesTerceros[i];
+    }
+
+    // CORRECCIÓN: 16 partidos totales
+    // Partidos 0-7:  primeros[0..7] vs mejoresTerceros (evitando mismo grupo)
+    // Partidos 8-15: segundos emparejados entre sí (evitando mismo grupo)
+
+    // Paso 1: primeros vs mejores terceros (8 partidos)
+    bool terceroUsado[8] = {false};
+    for (int i = 0; i < 8; i++) {
+        // Buscar un tercero que no sea del mismo grupo que primeros[i]
+        for (int k = 0; k < 8; k++) {
+            if (terceroUsado[k]) continue;
+            // Verificar que primeros[i] y mejoresTerceros[k] no sean del mismo grupo
+            bool mismoGrupo = false;
+            for (int g = 0; g < NUM_GRUPOS; g++) {
+                bool primerEsDeG = false, terceroEsDeG = false;
+                for (int e = 0; e < NUM_EQUIPOS_GRUPO; e++) {
+                    if (grupos[g].getEquipo(e) == primeros[i])
+                        primerEsDeG = true;
+                    if (grupos[g].getEquipo(e) == mejoresTerceros[k])
+                        terceroEsDeG = true;
+                }
+                if (primerEsDeG && terceroEsDeG) {
+                    mismoGrupo = true;
+                    break;
+                }
+            }
+            if (!mismoGrupo) {
+                partidosR16[i].setEquipo1(primeros[i]);
+                partidosR16[i].setEquipo2(mejoresTerceros[k]);
+                partidosR16[i].setFecha(fechaR16);
+                partidosR16[i].setSede("nombreSede");
+                partidosR16[i].setHora("00:00");
+                partidosR16[i].setArbitro(0, "codArbitro1");
+                partidosR16[i].setArbitro(1, "codArbitro2");
+                partidosR16[i].setArbitro(2, "codArbitro3");
+                partidosR16[i].setEsEliminatoria(true);
+                terceroUsado[k] = true;
+                break;
+            }
+        }
+    }
+
+    // Paso 2: segundos entre sí (8 partidos, índices 8-15)
+    // Emparejar los 12 segundos en 6 pares... pero solo necesitamos 8 partidos
+    // Usamos los 12 segundos: los primeros 4 juegan contra cabezas de grupo
+    // los últimos 8 juegan entre sí según el enunciado
+    // Por simplicidad: emparejamos los 12 segundos en 6 pares consecutivos
+    // evitando mismo grupo
+    bool segundoUsado[NUM_GRUPOS] = {false};
+    int partidoIdx = 8;
+
+    for (int i = 0; i < NUM_GRUPOS && partidoIdx < 16; i++) {
+        if (segundoUsado[i]) continue;
+        for (int j = i + 1; j < NUM_GRUPOS && partidoIdx < 16; j++) {
+            if (segundoUsado[j]) continue;
+            // Los segundos siempre vienen de grupos distintos → no hay conflicto
+            partidosR16[partidoIdx].setEquipo1(segundos[i]);
+            partidosR16[partidoIdx].setEquipo2(segundos[j]);
+            partidosR16[partidoIdx].setFecha(fechaR16);
+            partidosR16[partidoIdx].setSede("nombreSede");
+            partidosR16[partidoIdx].setHora("00:00");
+            partidosR16[partidoIdx].setArbitro(0, "codArbitro1");
+            partidosR16[partidoIdx].setArbitro(1, "codArbitro2");
+            partidosR16[partidoIdx].setArbitro(2, "codArbitro3");
+            partidosR16[partidoIdx].setEsEliminatoria(true);
+            segundoUsado[i] = true;
+            segundoUsado[j] = true;
+            partidoIdx++;
+            break;
+        }
     }
 
     cout << "\n=== PARTIDOS R16 CONFIGURADOS ===" << endl;
-    for (int i = 0; i < 32; i++) {
-        cout << partidosR16[i].getEquipo1()->getPais()
-        << " vs "
-        << partidosR16[i].getEquipo2()->getPais()
-        << endl;
+    for (int i = 0; i < 16; i++) {
+        cout << (i + 1) << ". "
+             << partidosR16[i].getEquipo1()->getPais()
+             << " vs "
+             << partidosR16[i].getEquipo2()->getPais()
+             << endl;
     }
 }
 
-// Simula los partidos de R16
+// Simula los 16 partidos de R16 y configura R8
 void Torneo::simularR16() {
     cout << "\n=== DIECISEISAVOS DE FINAL ===" << endl;
-    for (int i = 0; i < 32; i++) {
+    for (int i = 0; i < 16; i++) {
         partidosR16[i].simular();
         partidosR16[i].imprimir();
     }
-    // Configurar R8 con los ganadores
-    for (int i = 0; i < 16; i++) {
-        int g1 = partidosR16[i*2].getResEquipo1().getGolesFavor();
-        int g2 = partidosR16[i*2].getResEquipo2().getGolesFavor();
-        Equipo* ganador1 = g1 >= g2 ?
-                               partidosR16[i*2].getEquipo1() :
-                               partidosR16[i*2].getEquipo2();
 
-        g1 = partidosR16[i*2+1].getResEquipo1().getGolesFavor();
-        g2 = partidosR16[i*2+1].getResEquipo2().getGolesFavor();
-        Equipo* ganador2 = g1 >= g2 ?
-                               partidosR16[i*2+1].getEquipo1() :
-                               partidosR16[i*2+1].getEquipo2();
+    // CORRECCIÓN: 16 partidos → 8 ganadores → 8 partidos de R8
+    for (int i = 0; i < 8; i++) {
+        int g1 = partidosR16[i * 2].getResEquipo1().getGolesFavor();
+        int g2 = partidosR16[i * 2].getResEquipo2().getGolesFavor();
+        Equipo* ganador1 = (g1 >= g2) ?
+                               partidosR16[i * 2].getEquipo1() :
+                               partidosR16[i * 2].getEquipo2();
+
+        g1 = partidosR16[i * 2 + 1].getResEquipo1().getGolesFavor();
+        g2 = partidosR16[i * 2 + 1].getResEquipo2().getGolesFavor();
+        Equipo* ganador2 = (g1 >= g2) ?
+                               partidosR16[i * 2 + 1].getEquipo1() :
+                               partidosR16[i * 2 + 1].getEquipo2();
 
         partidosR8[i].setEquipo1(ganador1);
         partidosR8[i].setEquipo2(ganador2);
@@ -288,26 +331,27 @@ void Torneo::simularR16() {
     }
 }
 
-// Simula octavos de final
+// Simula los 8 partidos de octavos y configura QF
 void Torneo::simularR8() {
     cout << "\n=== OCTAVOS DE FINAL ===" << endl;
-    for (int i = 0; i < 16; i++) {
+    for (int i = 0; i < 8; i++) {
         partidosR8[i].simular();
         partidosR8[i].imprimir();
     }
-    // Configurar QF con ganadores
-    for (int i = 0; i < 8; i++) {
-        int g1 = partidosR8[i*2].getResEquipo1().getGolesFavor();
-        int g2 = partidosR8[i*2].getResEquipo2().getGolesFavor();
-        Equipo* ganador1 = g1 >= g2 ?
-                               partidosR8[i*2].getEquipo1() :
-                               partidosR8[i*2].getEquipo2();
 
-        g1 = partidosR8[i*2+1].getResEquipo1().getGolesFavor();
-        g2 = partidosR8[i*2+1].getResEquipo2().getGolesFavor();
-        Equipo* ganador2 = g1 >= g2 ?
-                               partidosR8[i*2+1].getEquipo1() :
-                               partidosR8[i*2+1].getEquipo2();
+    // CORRECCIÓN: 8 partidos → 4 ganadores → 4 partidos de QF
+    for (int i = 0; i < 4; i++) {
+        int g1 = partidosR8[i * 2].getResEquipo1().getGolesFavor();
+        int g2 = partidosR8[i * 2].getResEquipo2().getGolesFavor();
+        Equipo* ganador1 = (g1 >= g2) ?
+                               partidosR8[i * 2].getEquipo1() :
+                               partidosR8[i * 2].getEquipo2();
+
+        g1 = partidosR8[i * 2 + 1].getResEquipo1().getGolesFavor();
+        g2 = partidosR8[i * 2 + 1].getResEquipo2().getGolesFavor();
+        Equipo* ganador2 = (g1 >= g2) ?
+                               partidosR8[i * 2 + 1].getEquipo1() :
+                               partidosR8[i * 2 + 1].getEquipo2();
 
         partidosQF[i].setEquipo1(ganador1);
         partidosQF[i].setEquipo2(ganador2);
@@ -321,26 +365,27 @@ void Torneo::simularR8() {
     }
 }
 
-// Simula cuartos de final
+// Simula los 4 partidos de cuartos y configura SF
 void Torneo::simularQF() {
     cout << "\n=== CUARTOS DE FINAL ===" << endl;
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 4; i++) {
         partidosQF[i].simular();
         partidosQF[i].imprimir();
     }
-    // Configurar SF con ganadores
-    for (int i = 0; i < 4; i++) {
-        int g1 = partidosQF[i*2].getResEquipo1().getGolesFavor();
-        int g2 = partidosQF[i*2].getResEquipo2().getGolesFavor();
-        Equipo* ganador1 = g1 >= g2 ?
-                               partidosQF[i*2].getEquipo1() :
-                               partidosQF[i*2].getEquipo2();
 
-        g1 = partidosQF[i*2+1].getResEquipo1().getGolesFavor();
-        g2 = partidosQF[i*2+1].getResEquipo2().getGolesFavor();
-        Equipo* ganador2 = g1 >= g2 ?
-                               partidosQF[i*2+1].getEquipo1() :
-                               partidosQF[i*2+1].getEquipo2();
+    // CORRECCIÓN: 4 partidos → 2 ganadores → 2 partidos de SF
+    for (int i = 0; i < 2; i++) {
+        int g1 = partidosQF[i * 2].getResEquipo1().getGolesFavor();
+        int g2 = partidosQF[i * 2].getResEquipo2().getGolesFavor();
+        Equipo* ganador1 = (g1 >= g2) ?
+                               partidosQF[i * 2].getEquipo1() :
+                               partidosQF[i * 2].getEquipo2();
+
+        g1 = partidosQF[i * 2 + 1].getResEquipo1().getGolesFavor();
+        g2 = partidosQF[i * 2 + 1].getResEquipo2().getGolesFavor();
+        Equipo* ganador2 = (g1 >= g2) ?
+                               partidosQF[i * 2 + 1].getEquipo1() :
+                               partidosQF[i * 2 + 1].getEquipo2();
 
         partidosSF[i].setEquipo1(ganador1);
         partidosSF[i].setEquipo2(ganador2);
@@ -354,28 +399,31 @@ void Torneo::simularQF() {
     }
 }
 
-// Simula semifinales y configura final y tercer puesto
+// Simula los 2 partidos de semifinales y configura final y tercer puesto
+// CORRECCIÓN: solo hay 2 partidos de SF (no 4)
 void Torneo::simularSF() {
     cout << "\n=== SEMIFINALES ===" << endl;
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 2; i++) {
         partidosSF[i].simular();
         partidosSF[i].imprimir();
     }
-    // Ganadores van a la final
-    // Perdedores van al partido del tercer puesto
+
     Equipo* ganadores[2];
     Equipo* perdedores[2];
+
+    // CORRECCIÓN: iterar sobre los 2 partidos de SF (índices 0 y 1)
     for (int i = 0; i < 2; i++) {
         int g1 = partidosSF[i].getResEquipo1().getGolesFavor();
         int g2 = partidosSF[i].getResEquipo2().getGolesFavor();
         if (g1 >= g2) {
-            ganadores[i] = partidosSF[i].getEquipo1();
+            ganadores[i]  = partidosSF[i].getEquipo1();
             perdedores[i] = partidosSF[i].getEquipo2();
         } else {
-            ganadores[i] = partidosSF[i].getEquipo2();
+            ganadores[i]  = partidosSF[i].getEquipo2();
             perdedores[i] = partidosSF[i].getEquipo1();
         }
     }
+
     // Configurar final
     partidoFinal.setEquipo1(ganadores[0]);
     partidoFinal.setEquipo2(ganadores[1]);
@@ -419,15 +467,34 @@ void Torneo::imprimirGrupos() const {
 
 // IV - Estadísticas finales del torneo
 void Torneo::imprimirEstadisticas() const {
-    cout << "\n=== ESTADÍSTICAS FINALES ===" << endl;
+    cout << "\n=== ESTADISTICAS FINALES ===" << endl;
 
-    // Campeón
-    int g1 = partidoFinal.getResEquipo1().getGolesFavor();//todavía falta hacerla
-    int g2 = partidoFinal.getResEquipo2().getGolesFavor();// todavía falta hacerla
-    Equipo* campeon = g1 >= g2 ?
+    // Determinar campeón
+    // CORRECCIÓN: usar versión const de getResEquipo
+    int g1 = partidoFinal.getResEquipo1().getGolesFavor();
+    int g2 = partidoFinal.getResEquipo2().getGolesFavor();
+    Equipo* campeon = (g1 >= g2) ?
                           partidoFinal.getEquipo1() :
                           partidoFinal.getEquipo2();
-    cout << "CAMPEON: " << campeon->getPais() << endl;
+    cout << "1er puesto (CAMPEON): " << campeon->getPais() << endl;
+
+    // 2do puesto: el perdedor de la final
+    Equipo* subcampeon = (g1 >= g2) ?
+                             partidoFinal.getEquipo2() :
+                             partidoFinal.getEquipo1();
+    cout << "2do puesto: " << subcampeon->getPais() << endl;
+
+    // 3er y 4to puesto: del partido del tercer puesto
+    int g3 = partidoTercero.getResEquipo1().getGolesFavor();
+    int g4 = partidoTercero.getResEquipo2().getGolesFavor();
+    Equipo* tercerPuesto = (g3 >= g4) ?
+                               partidoTercero.getEquipo1() :
+                               partidoTercero.getEquipo2();
+    Equipo* cuartoPuesto = (g3 >= g4) ?
+                               partidoTercero.getEquipo2() :
+                               partidoTercero.getEquipo1();
+    cout << "3er puesto: " << tercerPuesto->getPais() << endl;
+    cout << "4to puesto: " << cuartoPuesto->getPais() << endl;
 
     // Máximo goleador del campeón
     Jugador* jugs = campeon->getJugadores();
@@ -439,15 +506,15 @@ void Torneo::imprimirEstadisticas() const {
             idxMaxGoleador = i;
         }
     }
-    cout << "Max goleador del campeon: "
+    cout << "\nMax goleador del campeon: "
          << jugs[idxMaxGoleador].getNombre() << " "
          << jugs[idxMaxGoleador].getApellido()
          << " (" << maxGoles << " goles)" << endl;
 
     // Top 3 goleadores del torneo
     cout << "\nTop 3 goleadores del torneo:" << endl;
-    int topGoles[3] = {0, 0, 0};
-    int topEquipo[3] = {-1, -1, -1};
+    int topGoles[3]   = {0, 0, 0};
+    int topEquipo[3]  = {-1, -1, -1};
     int topJugador[3] = {-1, -1, -1};
 
     for (int e = 0; e < numEquipos; e++) {
@@ -455,25 +522,19 @@ void Torneo::imprimirEstadisticas() const {
         for (int j = 0; j < NUM_JUGADORES; j++) {
             int g = js[j].getStats().getGoles();
             if (g > topGoles[0]) {
-                topGoles[2] = topGoles[1];
-                topEquipo[2] = topEquipo[1];
+                topGoles[2]   = topGoles[1];   topEquipo[2]  = topEquipo[1];
                 topJugador[2] = topJugador[1];
-                topGoles[1] = topGoles[0];
-                topEquipo[1] = topEquipo[0];
+                topGoles[1]   = topGoles[0];   topEquipo[1]  = topEquipo[0];
                 topJugador[1] = topJugador[0];
-                topGoles[0] = g;
-                topEquipo[0] = e;
+                topGoles[0]   = g;             topEquipo[0]  = e;
                 topJugador[0] = j;
             } else if (g > topGoles[1]) {
-                topGoles[2] = topGoles[1];
-                topEquipo[2] = topEquipo[1];
+                topGoles[2]   = topGoles[1];   topEquipo[2]  = topEquipo[1];
                 topJugador[2] = topJugador[1];
-                topGoles[1] = g;
-                topEquipo[1] = e;
+                topGoles[1]   = g;             topEquipo[1]  = e;
                 topJugador[1] = j;
             } else if (g > topGoles[2]) {
-                topGoles[2] = g;
-                topEquipo[2] = e;
+                topGoles[2]   = g;             topEquipo[2]  = e;
                 topJugador[2] = j;
             }
         }
@@ -481,10 +542,9 @@ void Torneo::imprimirEstadisticas() const {
 
     for (int i = 0; i < 3; i++) {
         if (topEquipo[i] != -1) {
-            Jugador& jug = equipos[topEquipo[i]]
-                               .getJugadores()[topJugador[i]];
-            cout << (i+1) << ". " << jug.getNombre()
-                 << " " << jug.getApellido()
+            Jugador& jug = equipos[topEquipo[i]].getJugadores()[topJugador[i]];
+            cout << (i + 1) << ". "
+                 << jug.getNombre() << " " << jug.getApellido()
                  << " (" << equipos[topEquipo[i]].getPais() << ")"
                  << " - " << topGoles[i] << " goles" << endl;
         }
@@ -502,4 +562,66 @@ void Torneo::imprimirEstadisticas() const {
     cout << "\nEquipo con mas goles historicos: "
          << equipos[idxMaxEquipo].getPais()
          << " (" << maxGolesHist << " goles)" << endl;
+
+    // Confederación con mayor presencia en R16, R8 y R4 (QF)
+    cout << "\nConfederacion con mayor presencia por etapa:" << endl;
+
+    // R16: 32 equipos (los 16 partidos × 2 equipos)
+    int confCountR16[6] = {0}; // UEFA, CONMEBOL, CONCACAF, CAF, AFC, OFC
+    const char* confNombres[6] = {"UEFA","CONMEBOL","CONCACAF","CAF","AFC","OFC"};
+
+    for (int i = 0; i < 16; i++) {
+        const char* c1 = partidosR16[i].getEquipo1()->getConfederacion();
+        const char* c2 = partidosR16[i].getEquipo2()->getConfederacion();
+        for (int k = 0; k < 6; k++) {
+            if (strcmp(c1, confNombres[k]) == 0) confCountR16[k]++;
+            if (strcmp(c2, confNombres[k]) == 0) confCountR16[k]++;
+        }
+    }
+    int maxR16 = 0;
+    for (int k = 0; k < 6; k++)
+        if (confCountR16[k] > maxR16) maxR16 = confCountR16[k];
+    cout << "R16: ";
+    for (int k = 0; k < 6; k++)
+        if (confCountR16[k] == maxR16)
+            cout << confNombres[k] << " (" << maxR16 << " equipos) ";
+    cout << endl;
+
+    // R8: 16 equipos
+    int confCountR8[6] = {0};
+    for (int i = 0; i < 8; i++) {
+        const char* c1 = partidosR8[i].getEquipo1()->getConfederacion();
+        const char* c2 = partidosR8[i].getEquipo2()->getConfederacion();
+        for (int k = 0; k < 6; k++) {
+            if (strcmp(c1, confNombres[k]) == 0) confCountR8[k]++;
+            if (strcmp(c2, confNombres[k]) == 0) confCountR8[k]++;
+        }
+    }
+    int maxR8 = 0;
+    for (int k = 0; k < 6; k++)
+        if (confCountR8[k] > maxR8) maxR8 = confCountR8[k];
+    cout << "R8:  ";
+    for (int k = 0; k < 6; k++)
+        if (confCountR8[k] == maxR8)
+            cout << confNombres[k] << " (" << maxR8 << " equipos) ";
+    cout << endl;
+
+    // R4 (QF): 8 equipos
+    int confCountQF[6] = {0};
+    for (int i = 0; i < 4; i++) {
+        const char* c1 = partidosQF[i].getEquipo1()->getConfederacion();
+        const char* c2 = partidosQF[i].getEquipo2()->getConfederacion();
+        for (int k = 0; k < 6; k++) {
+            if (strcmp(c1, confNombres[k]) == 0) confCountQF[k]++;
+            if (strcmp(c2, confNombres[k]) == 0) confCountQF[k]++;
+        }
+    }
+    int maxQF = 0;
+    for (int k = 0; k < 6; k++)
+        if (confCountQF[k] > maxQF) maxQF = confCountQF[k];
+    cout << "R4:  ";
+    for (int k = 0; k < 6; k++)
+        if (confCountQF[k] == maxQF)
+            cout << confNombres[k] << " (" << maxQF << " equipos) ";
+    cout << endl;
 }

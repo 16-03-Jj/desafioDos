@@ -20,7 +20,6 @@ Partido::Partido() {
     equipo2 = nullptr;
     fueProrroga = false;
     simulado = false;
-    // Por defecto es partido de grupos, no eliminatoria
     esEliminatoria = false;
 }
 
@@ -97,6 +96,8 @@ Equipo* Partido::getEquipo1() const { return equipo1; }
 Equipo* Partido::getEquipo2() const { return equipo2; }
 ResPartidoEquipo& Partido::getResEquipo1() { return resEquipo1; }
 ResPartidoEquipo& Partido::getResEquipo2() { return resEquipo2; }
+const ResPartidoEquipo& Partido::getResEquipo1() const { return resEquipo1; }
+const ResPartidoEquipo& Partido::getResEquipo2() const { return resEquipo2; }
 bool Partido::getFueProrroga() const { return fueProrroga; }
 bool Partido::getSimulado() const { return simulado; }
 bool Partido::getEsEliminatoria() const { return esEliminatoria; }
@@ -136,11 +137,13 @@ void Partido::setEsEliminatoria(bool e) { esEliminatoria = e; }
 int Partido::calcularGolesEsperados(Equipo* atacante, Equipo* defensor) {
     float lambda1 = 0.4f;
     float lambda2 = 0.6f;
-    float alpha  = 1.35f;
+    float alpha   = 1.35f;
     float GFA = atacante->getStats().promGolesFavor();
     float GCB = defensor->getStats().promGolesContra();
     float golesEsperados = lambda1 * GFA + lambda2 * GCB * alpha;
-    return (int)(golesEsperados + 0.5f);
+    int resultado = (int)(golesEsperados + 0.5f);
+    if (resultado < 0) resultado = 0;
+    return resultado;
 }
 
 // Elige 11 jugadores aleatorios del equipo
@@ -165,6 +168,7 @@ void Partido::simularStatsJugadores(ResPartidoEquipo& res,
     int golesRestantes = golesEquipo;
     for (int i = 0; i < NUM_CONVOCADOS; i++) {
         EstadisticasJugador& stats = res.getStatsJugador(i);
+
 
         // Minutos jugados: 90 normal, 120 si hubo prorroga
         stats.setMinutosJugados(minutos);
@@ -206,41 +210,45 @@ void Partido::simularStatsJugadores(ResPartidoEquipo& res,
         }
         stats.setFaltas(faltas);
     }
+
+
 }
 
 // Rompe el empate en eliminatorias usando ranking FIFA
 // Mejor ranking = número más bajo = más probabilidad de ganar
+// CORRECCIÓN: protección contra rankingFIFA == 0
 void Partido::romperEmpate() {
     int r1 = equipo1->getRankingFIFA();
     int r2 = equipo2->getRankingFIFA();
 
-    // La probabilidad de ganar es inversamente proporcional al ranking
-    // Si r1=5 y r2=20 → equipo1 tiene más probabilidad
-    // Usamos los valores inversos como pesos
-    // total = r1 + r2, si rand() % total < r2 gana equipo1
-    // porque r2 grande = equipo1 mejor
+
+    // Protección contra ranking 0 o negativo
+    if (r1 <= 0) r1 = 1;
+    if (r2 <= 0) r2 = 1;
+
+    // total = r1 + r2
+    // si rand() % total < r2 → gana equipo1
+    // (r2 grande significa equipo2 tiene peor ranking → equipo1 gana más veces)
     int total = r1 + r2;
     if ((rand() % total) < r2) {
-        // Gana equipo1: suma un gol extra
         resEquipo1.setGolesFavor(resEquipo1.getGolesFavor() + 1);
     } else {
-        // Gana equipo2: suma un gol extra
         resEquipo2.setGolesFavor(resEquipo2.getGolesFavor() + 1);
     }
     fueProrroga = true;
+
+
 }
 
 // Actualiza históricos de jugadores y equipos al terminar el partido
 void Partido::actualizarHistoricos() {
-    // Minutos según si hubo prorroga o no
-    int minutos = fueProrroga ? 120 : 90;
-
     // Actualizar jugadores equipo 1
     Jugador* jugs1 = equipo1->getJugadores();
     for (int i = 0; i < NUM_CONVOCADOS; i++) {
         int idx = resEquipo1.getIndiceJugador(i);
         jugs1[idx].getStats().acumular(resEquipo1.getStatsJugador(i));
     }
+
 
     // Actualizar jugadores equipo 2
     Jugador* jugs2 = equipo2->getJugadores();
@@ -270,13 +278,34 @@ void Partido::actualizarHistoricos() {
         statsEq2.setEmpatados(1);
     }
 
+    // Actualizar tarjetas y faltas del equipo sumando las de los jugadores
+    int ta1 = 0, tr1 = 0, f1 = 0;
+    int ta2 = 0, tr2 = 0, f2 = 0;
+    for (int i = 0; i < NUM_CONVOCADOS; i++) {
+        ta1 += resEquipo1.getStatsJugador(i).getTarjetasAmarillas();
+        tr1 += resEquipo1.getStatsJugador(i).getTarjetasRojas();
+        f1  += resEquipo1.getStatsJugador(i).getFaltas();
+        ta2 += resEquipo2.getStatsJugador(i).getTarjetasAmarillas();
+        tr2 += resEquipo2.getStatsJugador(i).getTarjetasRojas();
+        f2  += resEquipo2.getStatsJugador(i).getFaltas();
+    }
+    statsEq1.setTarjetasAmarillas(ta1);
+    statsEq1.setTarjetasRojas(tr1);
+    statsEq1.setFaltas(f1);
+    statsEq2.setTarjetasAmarillas(ta2);
+    statsEq2.setTarjetasRojas(tr2);
+    statsEq2.setFaltas(f2);
+
     equipo1->getStats().acumular(statsEq1);
     equipo2->getStats().acumular(statsEq2);
+
+
 }
 
 // Simula el partido completo
 void Partido::simular() {
     if (simulado) return;
+
 
     // Paso 1: elegir convocados
     elegirConvocados(equipo1, resEquipo1);
@@ -291,8 +320,13 @@ void Partido::simular() {
     resEquipo2.setGolesContra(golesEq1);
 
     // Paso 3: calcular posesión proporcional al ranking FIFA inverso
-    float inv1 = 1.0f / equipo1->getRankingFIFA();
-    float inv2 = 1.0f / equipo2->getRankingFIFA();
+    // CORRECCIÓN: protección contra rankingFIFA == 0
+    int r1 = equipo1->getRankingFIFA();
+    int r2 = equipo2->getRankingFIFA();
+    if (r1 <= 0) r1 = 1;
+    if (r2 <= 0) r2 = 1;
+    float inv1 = 1.0f / r1;
+    float inv2 = 1.0f / r2;
     float pos1 = (inv1 / (inv1 + inv2)) * 100.0f;
     resEquipo1.setPosesion(pos1);
     resEquipo2.setPosesion(100.0f - pos1);
@@ -301,7 +335,6 @@ void Partido::simular() {
     int minutos = 90;
     if (esEliminatoria && golesEq1 == golesEq2) {
         romperEmpate();
-        // En prorroga todos juegan 120 minutos
         minutos = 120;
     }
 
@@ -313,26 +346,29 @@ void Partido::simular() {
     actualizarHistoricos();
 
     simulado = true;
+
+
 }
 
 // Imprime toda la información del partido
 void Partido::imprimir() const {
     cout << "Fecha: " << fecha
-         << " | Hora: " << hora
-         << " | Sede: " << sede << endl;
+         << "| Hora: " << hora
+                   << " | Sede: "<< sede << endl;
     cout << equipo1->getPais()
-         << " vs "
+         << "vs "
          << equipo2->getPais() << endl;
     cout << "Resultado: "
          << resEquipo1.getGolesFavor()
          << " - "
          << resEquipo2.getGolesFavor();
-    if (fueProrroga) cout << " (Prorroga)";
+    if (fueProrroga) cout << "(Prorroga)";
     cout << endl;
     cout << "Posesion: "
          << equipo1->getPais() << " "
          << resEquipo1.getPosesion() << "% | "
-         << equipo2->getPais() << " "
-         << resEquipo2.getPosesion() << "%"
-         << endl;
+              << equipo2->getPais() << " "
+              << resEquipo2.getPosesion() << "%"
+              << endl;
 }
+

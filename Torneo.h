@@ -15,7 +15,7 @@ private:
     int numEquipos;
 
     // Partidos de cada etapa eliminatoria
-    // R16=32, R8=16, QF=8, SF=4, 3er=1, Final=1
+    // R16=16, R8=8, QF=4, SF=2, 3er=1, Final=1
     Partido* partidosR16;
     Partido* partidosR8;
     Partido* partidosQF;
@@ -56,15 +56,11 @@ private:
     void armarBombos(int bombos[NUM_BOMBOS][EQUIPOS_POR_BOMBO],
                      int& indiceUSA);
 
-    // Verifica si dos equipos pueden estar en el mismo grupo
+    // Verifica si un equipo puede entrar a un grupo
     bool puedenCompartirGrupo(Equipo* eq1, Equipo* eq2, Grupo& grupo);
 
     // Configura los partidos de R16 según tabla de clasificación
     void configurarR16();
-
-    // Configura partidos de etapas siguientes según ganadores
-    void configurarSiguienteEtapa(Partido* etapaActual, int numPartidos,
-                                  Partido* etapaSiguiente);
 };
 
 #endif // TORNEO_H

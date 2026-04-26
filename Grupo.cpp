@@ -67,16 +67,15 @@ void Grupo::setEquipo(int indice, Equipo* equipo) {
 // Restricciones del enunciado:
 // - Máximo 4 partidos por día en todo el torneo
 // - Ningún equipo juega con menos de 3 días de diferencia
-void Grupo::configurarPartidos(int fechaInicio) {
-    // Los 6 partidos se arman con todas las combinaciones posibles
-    // de los 4 equipos: (0,1),(0,2),(0,3),(1,2),(1,3),(2,3)
-    int eq1[6] = {0, 0, 0, 1, 1, 2};
-    int eq2[6] = {1, 2, 3, 2, 3, 3};
-
-    // Asignamos fechas respetando que cada equipo
-    // descanse al menos 3 días entre partidos
-    // Día relativo desde fechaInicio para cada partido
-    int diasPartido[6] = {0, 1, 2, 3, 4, 5};
+void Grupo::configurarPartidos(int diaInicio) {//Correción de lógica
+    // Distribución round-robin para 4 equipos:
+    // Cada equipo descansa al menos 3 días entre partidos
+    // Jornada 1 (día 0): equipo0 vs equipo1, equipo2 vs equipo3
+    // Jornada 2 (día 4): equipo0 vs equipo2, equipo1 vs equipo3
+    // Jornada 3 (día 8): equipo0 vs equipo3, equipo1 vs equipo2
+    int eq1[6] = {0, 2, 0, 1, 0, 1};
+    int eq2[6] = {1, 3, 2, 3, 3, 2};
+    int dias[6] = {0, 0, 4, 4, 8, 8};
 
     for (int i = 0; i < NUM_PARTIDOS_GRUPO; i++) {
         partidos[i].setEquipo1(equipos[eq1[i]]);
@@ -88,15 +87,13 @@ void Grupo::configurarPartidos(int fechaInicio) {
         partidos[i].setArbitro(2, "codArbitro3");
         partidos[i].setEsEliminatoria(false);
 
-        // Calcular fecha: fechaInicio + diasPartido[i]
-        // Formato simple: "20/06/2026", "21/06/2026", etc.
+        // Fecha = diaInicio + dias[i], en junio 2026
         char fecha[12];
-        int dia = fechaInicio + diasPartido[i];
+        int dia = diaInicio + dias[i];
         snprintf(fecha, sizeof(fecha), "%02d/06/2026", dia);
         partidos[i].setFecha(fecha);
     }
 }
-
 // Simula los 6 partidos del grupo uno por uno
 void Grupo::simularPartidos() {
     for (int i = 0; i < NUM_PARTIDOS_GRUPO; i++) {
@@ -104,71 +101,76 @@ void Grupo::simularPartidos() {
     }
 }
 
-// Calcula los puntos de cada equipo según los resultados
-// 3 puntos por victoria, 1 por empate, 0 por derrota
 void Grupo::calcularPuntos() {
-    // Reiniciar puntos
     for (int i = 0; i < NUM_EQUIPOS_GRUPO; i++) {
         puntos[i] = 0;
     }
-    // Los 6 partidos con sus combinaciones de equipos
-    int eq1[6] = {0, 0, 0, 1, 1, 2};
-    int eq2[6] = {1, 2, 3, 2, 3, 3};
+
+    // Mismo orden que configurarPartidos
+    int eq1[6] = {0, 2, 0, 1, 0, 1};
+    int eq2[6] = {1, 3, 2, 3, 3, 2};
 
     for (int i = 0; i < NUM_PARTIDOS_GRUPO; i++) {
         int g1 = partidos[i].getResEquipo1().getGolesFavor();
         int g2 = partidos[i].getResEquipo2().getGolesFavor();
         if (g1 > g2) {
-            // Gana equipo1
             puntos[eq1[i]] += 3;
         } else if (g2 > g1) {
-            // Gana equipo2
             puntos[eq2[i]] += 3;
         } else {
-            // Empate
             puntos[eq1[i]] += 1;
             puntos[eq2[i]] += 1;
         }
     }
 }
 
-// Ordena los equipos por puntos aplicando criterios de desempate:
-// 1. Puntos
-// 2. Diferencia de goles
-// 3. Goles a favor
-// 4. Sorteo (no implementado, queda pendiente)
 void Grupo::clasificar() {
-    // Inicializar orden
     for (int i = 0; i < NUM_EQUIPOS_GRUPO; i++) {
         ordenClasificacion[i] = i;
     }
-    // Ordenamiento burbuja por puntos y criterios de desempate
+
+    // Mismo orden que configurarPartidos para calcular dif de goles del grupo
+    int eq1idx[6] = {0, 2, 0, 1, 0, 1};
+    int eq2idx[6] = {1, 3, 2, 3, 3, 2};
+
+    // Calcular goles a favor y en contra SOLO en este grupo
+    int gfGrupo[NUM_EQUIPOS_GRUPO] = {0};
+    int gcGrupo[NUM_EQUIPOS_GRUPO] = {0};
+
+    for (int i = 0; i < NUM_PARTIDOS_GRUPO; i++) {
+        int g1 = partidos[i].getResEquipo1().getGolesFavor();
+        int g2 = partidos[i].getResEquipo2().getGolesFavor();
+        gfGrupo[eq1idx[i]] += g1;
+        gcGrupo[eq1idx[i]] += g2;
+        gfGrupo[eq2idx[i]] += g2;
+        gcGrupo[eq2idx[i]] += g1;
+    }
+
+    // Burbuja descendente
     for (int i = 0; i < NUM_EQUIPOS_GRUPO - 1; i++) {
         for (int j = 0; j < NUM_EQUIPOS_GRUPO - 1 - i; j++) {
             int a = ordenClasificacion[j];
             int b = ordenClasificacion[j + 1];
 
-            // Criterio 1: puntos
             bool intercambiar = false;
             if (puntos[a] < puntos[b]) {
                 intercambiar = true;
             } else if (puntos[a] == puntos[b]) {
-                // Criterio 2: diferencia de goles
-                int difA = equipos[a]->getStats().getGolesFavor()
-                           - equipos[a]->getStats().getGolesContra();
-                int difB = equipos[b]->getStats().getGolesFavor()
-                           - equipos[b]->getStats().getGolesContra();
+                // Desempate 1: diferencia de goles en el grupo
+                int difA = gfGrupo[a] - gcGrupo[a];
+                int difB = gfGrupo[b] - gcGrupo[b];
                 if (difA < difB) {
                     intercambiar = true;
                 } else if (difA == difB) {
-                    // Criterio 3: goles a favor
-                    if (equipos[a]->getStats().getGolesFavor()
-                        < equipos[b]->getStats().getGolesFavor()) {
+                    // Desempate 2: goles a favor en el grupo
+                    if (gfGrupo[a] < gfGrupo[b]) {
                         intercambiar = true;
+                    } else if (gfGrupo[a] == gfGrupo[b]) {
+                        // Desempate 3: sorteo
+                        if (rand() % 2 == 0) intercambiar = true;
                     }
                 }
             }
-            // Intercambiar posiciones
             if (intercambiar) {
                 int temp = ordenClasificacion[j];
                 ordenClasificacion[j] = ordenClasificacion[j + 1];
@@ -178,19 +180,33 @@ void Grupo::clasificar() {
     }
 }
 
-// Imprime la tabla de posiciones del grupo
 void Grupo::imprimirTabla() const {
+    // Recalcular goles solo del grupo para mostrar correctamente
+    int eq1idx[6] = {0, 2, 0, 1, 0, 1};
+    int eq2idx[6] = {1, 3, 2, 3, 3, 2};
+    int gfGrupo[NUM_EQUIPOS_GRUPO] = {0};
+    int gcGrupo[NUM_EQUIPOS_GRUPO] = {0};
+
+    for (int i = 0; i < NUM_PARTIDOS_GRUPO; i++) {
+        int g1 = partidos[i].getResEquipo1().getGolesFavor();
+        int g2 = partidos[i].getResEquipo2().getGolesFavor();
+        gfGrupo[eq1idx[i]] += g1;
+        gcGrupo[eq1idx[i]] += g2;
+        gfGrupo[eq2idx[i]] += g2;
+        gcGrupo[eq2idx[i]] += g1;
+    }
+
     cout << "\n=== GRUPO " << letra << " ===" << endl;
     cout << "Pos | Pais            | Pts | GF | GC | DIF" << endl;
     cout << "----+-----------------+-----+----+----+----" << endl;
+
     for (int i = 0; i < NUM_EQUIPOS_GRUPO; i++) {
         int idx = ordenClasificacion[i];
         Equipo* eq = equipos[idx];
-        int gf = eq->getStats().getGolesFavor();
-        int gc = eq->getStats().getGolesContra();
-        cout << "  " << (i + 1) << " | "
-             << eq->getPais();
-        // Espacios para alinear la tabla
+        int gf = gfGrupo[idx];
+        int gc = gcGrupo[idx];
+
+        cout << "  " << (i + 1) << " | " << eq->getPais();
         int espacios = 16 - strlen(eq->getPais());
         for (int s = 0; s < espacios; s++) cout << " ";
         cout << "| " << puntos[idx]
