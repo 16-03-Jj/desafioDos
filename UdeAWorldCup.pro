@@ -16,7 +16,8 @@ SOURCES += \
         Partido.cpp \
         ResPartidoEquipo.cpp \
         Torneo.cpp \
-        main.cpp
+        main.cpp \
+        medidor.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -32,4 +33,5 @@ HEADERS += \
     Jugador.h \
     Partido.h \
     ResPartidoEquipo.h \
-    Torneo.h
+    Torneo.h \
+    medidor.h

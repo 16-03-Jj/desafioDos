@@ -8,3 +8,4 @@ release/Partido.o
 release/ResPartidoEquipo.o
 release/Torneo.o
 release/main.o
+release/medidor.o

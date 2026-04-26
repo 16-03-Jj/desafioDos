@@ -160,58 +160,47 @@ void Partido::elegirConvocados(Equipo* equipo, ResPartidoEquipo& res) {
     }
 }
 
-// Simula las stats de cada jugador convocado
-// Aplica las probabilidades del enunciado
 void Partido::simularStatsJugadores(ResPartidoEquipo& res,
                                     int golesEquipo,
                                     int minutos) {
     int golesRestantes = golesEquipo;
     for (int i = 0; i < NUM_CONVOCADOS; i++) {
         EstadisticasJugador& stats = res.getStatsJugador(i);
-
-
-        // Minutos jugados: 90 normal, 120 si hubo prorroga
         stats.setMinutosJugados(minutos);
+        stats.setPartidosJugados(1);
 
-        // Goles: 4% por jugador hasta completar los goles del equipo
-        if (golesRestantes > 0 && (rand() % 100) < 4) {
+        // Si quedan goles por repartir y es el último jugador
+        // asignarle los goles restantes para garantizar que se repartan
+        if (i == NUM_CONVOCADOS - 1 && golesRestantes > 0) {
+            stats.setGoles(golesRestantes);
+            golesRestantes = 0;
+        } else if (golesRestantes > 0 && (rand() % 100) < 4) {
             stats.setGoles(1);
             golesRestantes--;
         } else {
             stats.setGoles(0);
         }
 
-        // Primera amarilla: 6%
+        // Amarillas
         int amarillas = 0;
         if ((rand() % 100) < 6) {
             amarillas = 1;
-            // Segunda amarilla: 1.15% ≈ 12/1000
-            if ((rand() % 1000) < 12) {
-                amarillas = 2;
-            }
+            if ((rand() % 1000) < 12) amarillas = 2;
         }
         stats.setTarjetasAmarillas(amarillas);
-
-        // Roja solo si acumuló dos amarillas
         stats.setTarjetasRojas(amarillas == 2 ? 1 : 0);
 
-        // Primera falta: 13%
+        // Faltas
         int faltas = 0;
         if ((rand() % 100) < 13) {
             faltas = 1;
-            // Segunda falta: 2.75% ≈ 28/1000
             if ((rand() % 1000) < 28) {
                 faltas = 2;
-                // Tercera falta: 0.7% ≈ 7/1000
-                if ((rand() % 1000) < 7) {
-                    faltas = 3;
-                }
+                if ((rand() % 1000) < 7) faltas = 3;
             }
         }
         stats.setFaltas(faltas);
     }
-
-
 }
 
 // Rompe el empate en eliminatorias usando ranking FIFA
@@ -306,6 +295,12 @@ void Partido::actualizarHistoricos() {
 void Partido::simular() {
     if (simulado) return;
 
+    // Protección contra punteros nulos
+    if (equipo1 == nullptr || equipo2 == nullptr) {
+        cout << "Error: partido sin equipos asignados" << endl;
+        return;
+    }
+
 
     // Paso 1: elegir convocados
     elegirConvocados(equipo1, resEquipo1);
@@ -353,10 +348,10 @@ void Partido::simular() {
 // Imprime toda la información del partido
 void Partido::imprimir() const {
     cout << "Fecha: " << fecha
-         << "| Hora: " << hora
+         << " | Hora: " << hora
                    << " | Sede: "<< sede << endl;
     cout << equipo1->getPais()
-         << "vs "
+         << " vs "
          << equipo2->getPais() << endl;
     cout << "Resultado: "
          << resEquipo1.getGolesFavor()
@@ -366,9 +361,36 @@ void Partido::imprimir() const {
     cout << endl;
     cout << "Posesion: "
          << equipo1->getPais() << " "
-         << resEquipo1.getPosesion() << "% | "
+         << resEquipo1.getPosesion() << " % | "
               << equipo2->getPais() << " "
-              << resEquipo2.getPosesion() << "%"
+              << resEquipo2.getPosesion() << " %"
               << endl;
+    // Mostrar goleadores equipo 1
+    cout << "Goleadores " << equipo1->getPais() << ": ";
+    bool hayGoles1 = false;
+    for (int i = 0; i < NUM_CONVOCADOS; i++) {
+        int idx = resEquipo1.getIndiceJugador(i);
+        if (idx < 0 || idx >= NUM_JUGADORES) continue; // protección
+        if (resEquipo1.getStatsJugador(i).getGoles() > 0) {
+            cout << "#" << equipo1->getJugadores()[idx].getNumeroCamiseta() << " ";
+            hayGoles1 = true;
+        }
+    }
+    if (!hayGoles1) cout << "ninguno";
+    cout << endl;
+
+    // Mostrar goleadores equipo 2
+    cout << "Goleadores " << equipo2->getPais() << ": ";
+    bool hayGoles2 = false;
+    for (int i = 0; i < NUM_CONVOCADOS; i++) {
+        int idx = resEquipo2.getIndiceJugador(i);
+        if (idx < 0 || idx >= NUM_JUGADORES) continue; // protección
+        if (resEquipo2.getStatsJugador(i).getGoles() > 0) {
+            cout << "#" << equipo2->getJugadores()[idx].getNumeroCamiseta() << " ";
+            hayGoles2 = true;
+        }
+    }
+    if (!hayGoles2) cout << "ninguno";
+    cout << endl;
 }
 

@@ -8,3 +8,4 @@ debug/Partido.o
 debug/ResPartidoEquipo.o
 debug/Torneo.o
 debug/main.o
+debug/medidor.o

@@ -2,6 +2,7 @@
 #define TORNEO_H
 
 #include "Grupo.h"
+#include "medidor.h"
 
 #define NUM_EQUIPOS_TORNEO 48
 #define NUM_GRUPOS 12
@@ -22,7 +23,7 @@ private:
     Partido* partidosSF;
     Partido partidoTercero;
     Partido partidoFinal;
-
+    mutable Medidor medidor;
 public:
     // Constructor y destructor
     Torneo();
@@ -41,7 +42,7 @@ public:
     void simularQF();
     void simularSF();
     void simularFinal();
-
+    void guardarTodo();
     // IV - Estadísticas finales
     void imprimirEstadisticas() const;
 

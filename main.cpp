@@ -46,7 +46,7 @@ int main() {
 
         case 1:
             // I - Cargar datos desde CSV
-            torneo.cargarDatos("selecciones_clasificadas_mundial.csv");
+           torneo.cargarDatos("C:\\Users\\JUAN JOSE\\OneDrive\\Documentos\\UdeAWorldCup\\build\\selecciones_clasificadas_mundial.csv");
             datosCargados = true;
             break;
 
@@ -131,6 +131,9 @@ int main() {
             break;
 
         case 0:
+            torneo.guardarTodo();
+            cout << "Saliendo de UdeAWorldCup..." << endl;
+            break;
             cout << "Saliendo de UdeAWorldCup..." << endl;
             break;
 

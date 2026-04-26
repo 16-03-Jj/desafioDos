@@ -1,0 +1,1248 @@
+France;1;nombre1;apellido1;1;0;0;0;0;210;0
+France;2;nombre2;apellido2;1;0;0;0;0;180;0
+France;3;nombre3;apellido3;1;0;0;0;0;420;0
+France;4;nombre4;apellido4;1;0;0;0;1;510;0
+France;5;nombre5;apellido5;1;0;0;0;0;0;0
+France;6;nombre6;apellido6;1;0;0;0;0;120;0
+France;7;nombre7;apellido7;2;0;0;0;2;510;0
+France;8;nombre8;apellido8;3;0;0;0;0;270;0
+France;9;nombre9;apellido9;1;0;0;0;0;390;0
+France;10;nombre10;apellido10;2;0;0;0;0;330;0
+France;11;nombre11;apellido11;1;0;0;0;1;480;0
+France;12;nombre12;apellido12;1;0;0;0;0;180;0
+France;13;nombre13;apellido13;1;0;0;0;1;300;0
+France;14;nombre14;apellido14;1;0;0;0;0;180;0
+France;15;nombre15;apellido15;3;0;1;0;0;90;0
+France;16;nombre16;apellido16;1;0;0;0;0;390;0
+France;17;nombre17;apellido17;1;0;0;0;0;330;0
+France;18;nombre18;apellido18;2;0;0;0;0;180;0
+France;19;nombre19;apellido19;1;0;0;0;0;90;0
+France;20;nombre20;apellido20;1;0;0;0;1;90;0
+France;21;nombre21;apellido21;0;0;0;0;1;90;0
+France;22;nombre22;apellido22;0;0;0;0;1;180;0
+France;23;nombre23;apellido23;3;0;0;0;0;330;0
+France;24;nombre24;apellido24;0;0;0;0;0;210;0
+France;25;nombre25;apellido25;2;0;1;0;0;300;0
+France;26;nombre26;apellido26;0;0;0;0;0;240;0
+Spain;1;nombre1;apellido1;1;0;0;0;1;300;0
+Spain;2;nombre2;apellido2;1;0;0;0;0;210;0
+Spain;3;nombre3;apellido3;4;0;0;0;2;300;0
+Spain;4;nombre4;apellido4;1;0;0;0;1;210;0
+Spain;5;nombre5;apellido5;1;0;0;0;0;390;0
+Spain;6;nombre6;apellido6;2;0;0;0;0;330;0
+Spain;7;nombre7;apellido7;1;0;0;0;2;300;0
+Spain;8;nombre8;apellido8;1;0;0;0;1;300;0
+Spain;9;nombre9;apellido9;3;0;1;0;0;720;0
+Spain;10;nombre10;apellido10;2;0;0;0;0;210;0
+Spain;11;nombre11;apellido11;1;0;0;0;1;390;0
+Spain;12;nombre12;apellido12;4;0;0;0;1;510;0
+Spain;13;nombre13;apellido13;1;0;1;0;0;270;0
+Spain;14;nombre14;apellido14;1;0;0;0;2;180;0
+Spain;15;nombre15;apellido15;1;0;1;0;0;510;0
+Spain;16;nombre16;apellido16;2;0;0;0;0;330;0
+Spain;17;nombre17;apellido17;1;0;0;0;0;120;0
+Spain;18;nombre18;apellido18;1;0;0;0;1;420;0
+Spain;19;nombre19;apellido19;1;0;0;0;0;390;0
+Spain;20;nombre20;apellido20;3;0;0;0;0;360;0
+Spain;21;nombre21;apellido21;0;0;0;0;1;420;0
+Spain;22;nombre22;apellido22;1;0;0;0;1;180;0
+Spain;23;nombre23;apellido23;1;0;0;0;1;300;0
+Spain;24;nombre24;apellido24;0;0;0;0;2;630;0
+Spain;25;nombre25;apellido25;0;0;0;0;0;300;0
+Spain;26;nombre26;apellido26;2;0;0;0;0;330;0
+Argentina;1;nombre1;apellido1;2;0;0;0;0;120;0
+Argentina;2;nombre2;apellido2;1;0;0;0;0;120;0
+Argentina;3;nombre3;apellido3;2;0;0;0;1;300;0
+Argentina;4;nombre4;apellido4;5;0;0;0;1;270;0
+Argentina;5;nombre5;apellido5;1;0;0;0;0;210;0
+Argentina;6;nombre6;apellido6;3;0;0;0;0;180;0
+Argentina;7;nombre7;apellido7;1;0;0;0;0;90;0
+Argentina;8;nombre8;apellido8;1;0;0;0;1;360;0
+Argentina;9;nombre9;apellido9;1;0;0;0;0;90;0
+Argentina;10;nombre10;apellido10;2;0;0;0;0;300;0
+Argentina;11;nombre11;apellido11;1;0;0;0;1;180;0
+Argentina;12;nombre12;apellido12;1;0;0;0;0;270;0
+Argentina;13;nombre13;apellido13;1;0;0;0;0;300;0
+Argentina;14;nombre14;apellido14;1;0;0;0;0;300;0
+Argentina;15;nombre15;apellido15;1;0;0;0;0;0;0
+Argentina;16;nombre16;apellido16;1;0;0;0;1;210;0
+Argentina;17;nombre17;apellido17;1;0;0;0;0;210;0
+Argentina;18;nombre18;apellido18;1;0;0;0;0;0;0
+Argentina;19;nombre19;apellido19;1;0;0;0;0;300;0
+Argentina;20;nombre20;apellido20;1;0;0;0;0;300;0
+Argentina;21;nombre21;apellido21;1;0;1;0;1;270;0
+Argentina;22;nombre22;apellido22;1;0;0;0;0;270;0
+Argentina;23;nombre23;apellido23;1;0;0;0;0;90;0
+Argentina;24;nombre24;apellido24;1;0;0;0;1;180;0
+Argentina;25;nombre25;apellido25;1;0;0;0;0;90;0
+Argentina;26;nombre26;apellido26;1;0;0;0;1;270;0
+England;1;nombre1;apellido1;1;0;0;0;1;90;0
+England;2;nombre2;apellido2;1;0;1;0;0;210;0
+England;3;nombre3;apellido3;1;0;0;0;0;120;0
+England;4;nombre4;apellido4;1;0;0;0;0;0;0
+England;5;nombre5;apellido5;1;0;0;0;1;90;0
+England;6;nombre6;apellido6;1;0;0;0;0;210;0
+England;7;nombre7;apellido7;1;0;0;0;0;90;0
+England;8;nombre8;apellido8;3;0;1;0;0;210;0
+England;9;nombre9;apellido9;1;0;0;0;0;300;0
+England;10;nombre10;apellido10;1;0;0;0;0;90;0
+England;11;nombre11;apellido11;2;0;0;0;1;180;0
+England;12;nombre12;apellido12;1;0;0;0;0;300;0
+England;13;nombre13;apellido13;1;0;1;0;0;90;0
+England;14;nombre14;apellido14;1;0;0;0;0;180;0
+England;15;nombre15;apellido15;1;0;0;0;0;180;0
+England;16;nombre16;apellido16;1;0;0;0;1;300;0
+England;17;nombre17;apellido17;1;0;0;0;0;0;0
+England;18;nombre18;apellido18;2;0;0;0;0;300;0
+England;19;nombre19;apellido19;1;0;0;0;0;120;0
+England;20;nombre20;apellido20;1;0;0;0;0;180;0
+England;21;nombre21;apellido21;0;0;0;0;0;210;0
+England;22;nombre22;apellido22;0;0;0;0;0;90;0
+England;23;nombre23;apellido23;0;0;0;0;0;300;0
+England;24;nombre24;apellido24;0;0;0;0;0;90;0
+England;25;nombre25;apellido25;2;0;0;0;0;270;0
+England;26;nombre26;apellido26;0;0;0;0;0;90;0
+Portugal;1;nombre1;apellido1;1;0;0;0;0;90;0
+Portugal;2;nombre2;apellido2;1;0;0;0;0;90;0
+Portugal;3;nombre3;apellido3;1;0;0;0;0;180;0
+Portugal;4;nombre4;apellido4;2;0;0;0;0;90;0
+Portugal;5;nombre5;apellido5;3;0;0;0;0;360;0
+Portugal;6;nombre6;apellido6;2;0;0;0;0;90;0
+Portugal;7;nombre7;apellido7;1;0;0;0;0;180;0
+Portugal;8;nombre8;apellido8;1;0;0;0;1;180;0
+Portugal;9;nombre9;apellido9;1;0;0;0;1;90;0
+Portugal;10;nombre10;apellido10;1;0;0;0;0;0;0
+Portugal;11;nombre11;apellido11;1;0;0;0;0;270;0
+Portugal;12;nombre12;apellido12;1;0;0;0;0;0;0
+Portugal;13;nombre13;apellido13;1;0;0;0;2;180;0
+Portugal;14;nombre14;apellido14;2;0;0;0;0;360;0
+Portugal;15;nombre15;apellido15;1;0;0;0;0;180;0
+Portugal;16;nombre16;apellido16;1;0;0;0;0;270;0
+Portugal;17;nombre17;apellido17;1;0;0;0;0;0;0
+Portugal;18;nombre18;apellido18;1;0;0;0;0;270;0
+Portugal;19;nombre19;apellido19;3;0;0;0;0;90;0
+Portugal;20;nombre20;apellido20;1;0;0;0;1;90;0
+Portugal;21;nombre21;apellido21;0;0;0;0;0;180;0
+Portugal;22;nombre22;apellido22;0;0;1;0;0;270;0
+Portugal;23;nombre23;apellido23;0;0;0;0;0;90;0
+Portugal;24;nombre24;apellido24;0;0;0;0;0;90;0
+Portugal;25;nombre25;apellido25;0;0;0;0;0;90;0
+Portugal;26;nombre26;apellido26;0;0;0;0;1;180;0
+Brazil;1;nombre1;apellido1;2;0;0;0;0;210;0
+Brazil;2;nombre2;apellido2;1;0;0;0;0;300;0
+Brazil;3;nombre3;apellido3;2;0;1;0;0;390;0
+Brazil;4;nombre4;apellido4;1;0;0;0;1;90;0
+Brazil;5;nombre5;apellido5;1;0;2;0;0;300;0
+Brazil;6;nombre6;apellido6;1;0;0;0;0;210;0
+Brazil;7;nombre7;apellido7;1;0;0;0;0;300;0
+Brazil;8;nombre8;apellido8;1;0;0;0;0;180;0
+Brazil;9;nombre9;apellido9;1;0;0;0;0;180;0
+Brazil;10;nombre10;apellido10;5;0;2;0;0;390;0
+Brazil;11;nombre11;apellido11;1;0;1;0;0;210;0
+Brazil;12;nombre12;apellido12;1;0;0;0;1;300;0
+Brazil;13;nombre13;apellido13;4;0;1;0;0;390;0
+Brazil;14;nombre14;apellido14;2;0;0;0;0;210;0
+Brazil;15;nombre15;apellido15;1;0;0;0;0;210;0
+Brazil;16;nombre16;apellido16;1;0;0;0;0;300;0
+Brazil;17;nombre17;apellido17;1;0;1;0;0;390;0
+Brazil;18;nombre18;apellido18;1;0;0;0;0;0;0
+Brazil;19;nombre19;apellido19;1;0;0;0;1;210;0
+Brazil;20;nombre20;apellido20;1;0;0;0;0;0;0
+Brazil;21;nombre21;apellido21;0;0;0;0;1;420;0
+Brazil;22;nombre22;apellido22;1;0;2;0;0;600;0
+Brazil;23;nombre23;apellido23;0;0;0;0;0;120;0
+Brazil;24;nombre24;apellido24;0;0;0;0;0;210;0
+Brazil;25;nombre25;apellido25;0;0;0;0;0;300;0
+Brazil;26;nombre26;apellido26;1;0;0;0;0;180;0
+Netherlands;1;nombre1;apellido1;1;0;0;0;0;180;0
+Netherlands;2;nombre2;apellido2;1;0;0;0;0;270;0
+Netherlands;3;nombre3;apellido3;1;0;0;0;0;90;0
+Netherlands;4;nombre4;apellido4;1;0;0;0;1;90;0
+Netherlands;5;nombre5;apellido5;1;0;0;0;1;90;0
+Netherlands;6;nombre6;apellido6;3;0;0;0;1;450;0
+Netherlands;7;nombre7;apellido7;5;0;0;0;1;360;0
+Netherlands;8;nombre8;apellido8;1;0;0;0;1;90;0
+Netherlands;9;nombre9;apellido9;1;0;0;0;0;180;0
+Netherlands;10;nombre10;apellido10;1;0;0;0;0;180;0
+Netherlands;11;nombre11;apellido11;1;0;0;0;0;90;0
+Netherlands;12;nombre12;apellido12;2;0;0;0;0;180;0
+Netherlands;13;nombre13;apellido13;1;0;0;0;0;90;0
+Netherlands;14;nombre14;apellido14;2;0;0;0;1;360;0
+Netherlands;15;nombre15;apellido15;1;0;0;0;0;360;0
+Netherlands;16;nombre16;apellido16;1;0;0;0;0;360;0
+Netherlands;17;nombre17;apellido17;1;0;0;0;0;90;0
+Netherlands;18;nombre18;apellido18;1;0;0;0;1;270;0
+Netherlands;19;nombre19;apellido19;1;0;0;0;0;0;0
+Netherlands;20;nombre20;apellido20;1;0;0;0;0;90;0
+Netherlands;21;nombre21;apellido21;0;0;0;0;1;180;0
+Netherlands;22;nombre22;apellido22;0;0;0;0;2;180;0
+Netherlands;23;nombre23;apellido23;0;0;0;0;1;90;0
+Netherlands;24;nombre24;apellido24;1;0;0;0;0;270;0
+Netherlands;25;nombre25;apellido25;0;0;0;0;0;180;0
+Netherlands;26;nombre26;apellido26;0;0;0;0;1;180;0
+Belgium;1;nombre1;apellido1;1;0;0;0;1;120;0
+Belgium;2;nombre2;apellido2;1;0;0;0;0;270;0
+Belgium;3;nombre3;apellido3;1;0;0;0;0;0;0
+Belgium;4;nombre4;apellido4;1;0;0;0;0;390;0
+Belgium;5;nombre5;apellido5;1;0;0;0;0;90;0
+Belgium;6;nombre6;apellido6;1;0;0;0;0;390;0
+Belgium;7;nombre7;apellido7;1;0;0;0;0;0;0
+Belgium;8;nombre8;apellido8;2;0;0;0;0;180;0
+Belgium;9;nombre9;apellido9;1;0;0;0;0;120;0
+Belgium;10;nombre10;apellido10;1;0;0;0;1;300;0
+Belgium;11;nombre11;apellido11;1;0;0;0;0;300;0
+Belgium;12;nombre12;apellido12;1;0;0;0;0;90;0
+Belgium;13;nombre13;apellido13;1;0;0;0;0;90;0
+Belgium;14;nombre14;apellido14;1;0;0;0;0;180;0
+Belgium;15;nombre15;apellido15;1;0;0;0;0;390;0
+Belgium;16;nombre16;apellido16;3;0;0;0;0;300;0
+Belgium;17;nombre17;apellido17;1;0;0;0;0;210;0
+Belgium;18;nombre18;apellido18;5;0;0;0;1;180;0
+Belgium;19;nombre19;apellido19;1;0;0;0;1;180;0
+Belgium;20;nombre20;apellido20;1;0;0;0;0;180;0
+Belgium;21;nombre21;apellido21;1;0;1;0;0;180;0
+Belgium;22;nombre22;apellido22;0;0;0;0;0;270;0
+Belgium;23;nombre23;apellido23;0;0;0;0;0;390;0
+Belgium;24;nombre24;apellido24;1;0;0;0;0;270;0
+Belgium;25;nombre25;apellido25;0;0;1;0;0;120;0
+Belgium;26;nombre26;apellido26;0;0;0;0;0;90;0
+Germany;1;nombre1;apellido1;2;0;0;0;0;270;0
+Germany;2;nombre2;apellido2;1;0;1;0;0;90;0
+Germany;3;nombre3;apellido3;1;0;1;0;0;270;0
+Germany;4;nombre4;apellido4;2;0;0;0;1;390;0
+Germany;5;nombre5;apellido5;2;0;1;0;1;90;0
+Germany;6;nombre6;apellido6;1;0;0;0;0;210;0
+Germany;7;nombre7;apellido7;1;0;0;0;0;300;0
+Germany;8;nombre8;apellido8;1;0;0;0;0;210;0
+Germany;9;nombre9;apellido9;1;0;0;0;0;90;0
+Germany;10;nombre10;apellido10;3;0;0;0;1;390;0
+Germany;11;nombre11;apellido11;1;0;0;0;0;270;0
+Germany;12;nombre12;apellido12;1;0;0;0;0;300;0
+Germany;13;nombre13;apellido13;1;0;0;0;2;360;0
+Germany;14;nombre14;apellido14;1;0;0;0;0;90;0
+Germany;15;nombre15;apellido15;1;0;0;0;3;390;0
+Germany;16;nombre16;apellido16;1;0;0;0;0;270;0
+Germany;17;nombre17;apellido17;3;0;0;0;1;300;0
+Germany;18;nombre18;apellido18;1;0;0;0;0;90;0
+Germany;19;nombre19;apellido19;1;0;0;0;1;480;0
+Germany;20;nombre20;apellido20;2;0;2;0;0;300;0
+Germany;21;nombre21;apellido21;0;0;0;0;1;180;0
+Germany;22;nombre22;apellido22;0;0;0;0;0;180;0
+Germany;23;nombre23;apellido23;0;0;0;0;0;90;0
+Germany;24;nombre24;apellido24;0;0;0;0;1;270;0
+Germany;25;nombre25;apellido25;0;0;0;0;0;0;0
+Germany;26;nombre26;apellido26;3;0;0;0;0;390;0
+Italy;1;nombre1;apellido1;1;0;0;0;1;270;0
+Italy;2;nombre2;apellido2;1;0;0;0;0;180;0
+Italy;3;nombre3;apellido3;1;0;0;0;0;180;0
+Italy;4;nombre4;apellido4;1;0;0;0;0;210;0
+Italy;5;nombre5;apellido5;1;0;0;0;0;300;0
+Italy;6;nombre6;apellido6;1;0;0;0;0;210;0
+Italy;7;nombre7;apellido7;1;0;0;0;0;180;0
+Italy;8;nombre8;apellido8;1;0;0;0;0;90;0
+Italy;9;nombre9;apellido9;1;0;0;0;1;390;0
+Italy;10;nombre10;apellido10;5;0;0;0;1;360;0
+Italy;11;nombre11;apellido11;1;0;0;0;2;90;0
+Italy;12;nombre12;apellido12;1;0;0;0;0;90;0
+Italy;13;nombre13;apellido13;1;0;0;0;0;90;0
+Italy;14;nombre14;apellido14;1;0;0;0;0;210;0
+Italy;15;nombre15;apellido15;1;0;0;0;1;180;0
+Italy;16;nombre16;apellido16;1;0;0;0;0;180;0
+Italy;17;nombre17;apellido17;1;0;0;0;1;180;0
+Italy;18;nombre18;apellido18;1;0;0;0;1;390;0
+Italy;19;nombre19;apellido19;3;0;0;0;0;90;0
+Italy;20;nombre20;apellido20;1;0;2;0;1;300;0
+Italy;21;nombre21;apellido21;0;0;0;0;0;120;0
+Italy;22;nombre22;apellido22;0;0;0;0;0;0;0
+Italy;23;nombre23;apellido23;0;0;1;0;0;300;0
+Italy;24;nombre24;apellido24;0;0;0;0;0;90;0
+Italy;25;nombre25;apellido25;1;0;0;0;0;300;0
+Italy;26;nombre26;apellido26;3;0;0;0;2;300;0
+Morocco;1;nombre1;apellido1;1;0;0;0;1;390;0
+Morocco;2;nombre2;apellido2;1;0;0;0;0;210;0
+Morocco;3;nombre3;apellido3;2;0;0;0;0;450;0
+Morocco;4;nombre4;apellido4;1;0;1;0;0;270;0
+Morocco;5;nombre5;apellido5;1;0;0;0;0;360;0
+Morocco;6;nombre6;apellido6;3;0;0;0;1;660;0
+Morocco;7;nombre7;apellido7;3;0;0;0;0;270;0
+Morocco;8;nombre8;apellido8;1;0;0;0;0;480;0
+Morocco;9;nombre9;apellido9;1;0;0;0;0;90;0
+Morocco;10;nombre10;apellido10;2;0;0;0;1;180;0
+Morocco;11;nombre11;apellido11;1;0;0;0;1;300;0
+Morocco;12;nombre12;apellido12;1;0;0;0;1;360;0
+Morocco;13;nombre13;apellido13;1;0;0;0;0;300;0
+Morocco;14;nombre14;apellido14;2;0;0;0;2;480;0
+Morocco;15;nombre15;apellido15;1;0;0;0;0;180;0
+Morocco;16;nombre16;apellido16;3;0;0;0;0;180;0
+Morocco;17;nombre17;apellido17;1;0;0;0;1;450;0
+Morocco;18;nombre18;apellido18;1;0;1;0;0;570;0
+Morocco;19;nombre19;apellido19;0;0;0;0;0;360;0
+Morocco;20;nombre20;apellido20;0;0;0;0;1;90;0
+Morocco;21;nombre21;apellido21;0;0;0;0;0;180;0
+Morocco;22;nombre22;apellido22;2;0;1;0;1;480;0
+Morocco;23;nombre23;apellido23;1;0;1;0;0;210;0
+Morocco;24;nombre24;apellido24;0;0;0;0;1;270;0
+Morocco;25;nombre25;apellido25;1;0;0;0;0;300;0
+Morocco;26;nombre26;apellido26;0;0;0;0;0;180;0
+Uruguay;1;nombre1;apellido1;2;0;0;0;0;180;0
+Uruguay;2;nombre2;apellido2;1;0;0;0;0;180;0
+Uruguay;3;nombre3;apellido3;1;0;0;0;0;90;0
+Uruguay;4;nombre4;apellido4;1;0;0;0;0;0;0
+Uruguay;5;nombre5;apellido5;1;0;0;0;0;180;0
+Uruguay;6;nombre6;apellido6;1;0;0;0;0;180;0
+Uruguay;7;nombre7;apellido7;1;0;0;0;2;180;0
+Uruguay;8;nombre8;apellido8;1;0;0;0;1;180;0
+Uruguay;9;nombre9;apellido9;1;0;0;0;0;90;0
+Uruguay;10;nombre10;apellido10;1;0;0;0;0;0;0
+Uruguay;11;nombre11;apellido11;1;0;1;0;2;180;0
+Uruguay;12;nombre12;apellido12;1;0;0;0;0;90;0
+Uruguay;13;nombre13;apellido13;1;0;0;0;0;180;0
+Uruguay;14;nombre14;apellido14;1;0;0;0;1;180;0
+Uruguay;15;nombre15;apellido15;2;0;0;0;0;270;0
+Uruguay;16;nombre16;apellido16;1;0;0;0;0;180;0
+Uruguay;17;nombre17;apellido17;1;0;0;0;0;90;0
+Uruguay;18;nombre18;apellido18;2;0;0;0;0;360;0
+Uruguay;19;nombre19;apellido19;0;0;0;0;0;90;0
+Uruguay;20;nombre20;apellido20;0;0;0;0;0;180;0
+Uruguay;21;nombre21;apellido21;0;0;0;0;0;270;0
+Uruguay;22;nombre22;apellido22;0;0;0;0;1;180;0
+Uruguay;23;nombre23;apellido23;1;0;0;0;0;90;0
+Uruguay;24;nombre24;apellido24;0;0;0;0;0;90;0
+Uruguay;25;nombre25;apellido25;0;0;0;0;0;180;0
+Uruguay;26;nombre26;apellido26;0;0;0;0;0;90;0
+Colombia;1;nombre1;apellido1;2;0;0;0;0;210;0
+Colombia;2;nombre2;apellido2;3;0;0;0;2;270;0
+Colombia;3;nombre3;apellido3;3;0;0;0;0;300;0
+Colombia;4;nombre4;apellido4;1;0;1;0;0;180;0
+Colombia;5;nombre5;apellido5;1;0;0;0;0;90;0
+Colombia;6;nombre6;apellido6;1;0;1;0;0;210;0
+Colombia;7;nombre7;apellido7;1;0;0;0;0;270;0
+Colombia;8;nombre8;apellido8;1;0;0;0;0;300;0
+Colombia;9;nombre9;apellido9;1;0;1;0;0;210;0
+Colombia;10;nombre10;apellido10;1;0;0;0;1;180;0
+Colombia;11;nombre11;apellido11;1;0;0;0;0;300;0
+Colombia;12;nombre12;apellido12;1;0;0;0;0;90;0
+Colombia;13;nombre13;apellido13;1;0;0;0;1;300;0
+Colombia;14;nombre14;apellido14;1;0;0;0;1;210;0
+Colombia;15;nombre15;apellido15;1;0;1;0;1;390;0
+Colombia;16;nombre16;apellido16;1;0;0;0;0;0;0
+Colombia;17;nombre17;apellido17;0;0;0;0;0;90;0
+Colombia;18;nombre18;apellido18;0;0;0;0;0;90;0
+Colombia;19;nombre19;apellido19;1;0;0;0;2;180;0
+Colombia;20;nombre20;apellido20;0;0;0;0;0;180;0
+Colombia;21;nombre21;apellido21;0;0;0;0;1;90;0
+Colombia;22;nombre22;apellido22;0;0;0;0;1;180;0
+Colombia;23;nombre23;apellido23;2;0;0;0;0;270;0
+Colombia;24;nombre24;apellido24;0;0;0;0;0;90;0
+Colombia;25;nombre25;apellido25;0;0;0;0;0;390;0
+Colombia;26;nombre26;apellido26;0;0;0;0;1;210;0
+Croatia;1;nombre1;apellido1;1;0;0;0;1;300;0
+Croatia;2;nombre2;apellido2;2;0;0;0;0;90;0
+Croatia;3;nombre3;apellido3;5;0;2;1;2;300;0
+Croatia;4;nombre4;apellido4;1;0;1;0;0;270;0
+Croatia;5;nombre5;apellido5;1;0;0;0;0;300;0
+Croatia;6;nombre6;apellido6;1;0;0;0;0;300;0
+Croatia;7;nombre7;apellido7;1;0;0;0;0;360;0
+Croatia;8;nombre8;apellido8;2;0;0;0;1;180;0
+Croatia;9;nombre9;apellido9;1;0;0;0;0;270;0
+Croatia;10;nombre10;apellido10;1;0;0;0;0;300;0
+Croatia;11;nombre11;apellido11;1;0;0;0;0;210;0
+Croatia;12;nombre12;apellido12;1;0;0;0;0;0;0
+Croatia;13;nombre13;apellido13;1;0;1;0;0;180;0
+Croatia;14;nombre14;apellido14;1;0;0;0;0;0;0
+Croatia;15;nombre15;apellido15;1;0;0;0;0;180;0
+Croatia;16;nombre16;apellido16;1;0;0;0;0;210;0
+Croatia;17;nombre17;apellido17;3;0;0;0;0;300;0
+Croatia;18;nombre18;apellido18;1;0;0;0;0;180;0
+Croatia;19;nombre19;apellido19;1;0;0;0;2;180;0
+Croatia;20;nombre20;apellido20;0;0;0;0;0;0;0
+Croatia;21;nombre21;apellido21;0;0;0;0;1;180;0
+Croatia;22;nombre22;apellido22;0;0;0;0;0;120;0
+Croatia;23;nombre23;apellido23;1;0;0;0;0;90;0
+Croatia;24;nombre24;apellido24;0;0;0;0;1;270;0
+Croatia;25;nombre25;apellido25;0;0;0;0;0;210;0
+Croatia;26;nombre26;apellido26;0;0;0;0;0;300;0
+Mexico;1;nombre1;apellido1;1;0;0;0;0;90;0
+Mexico;2;nombre2;apellido2;1;0;0;0;0;90;0
+Mexico;3;nombre3;apellido3;1;0;0;0;1;90;0
+Mexico;4;nombre4;apellido4;3;0;0;0;1;180;0
+Mexico;5;nombre5;apellido5;1;0;0;0;0;270;0
+Mexico;6;nombre6;apellido6;2;0;0;0;0;270;0
+Mexico;7;nombre7;apellido7;1;0;0;0;0;270;0
+Mexico;8;nombre8;apellido8;1;0;0;0;0;270;0
+Mexico;9;nombre9;apellido9;1;0;0;0;0;180;0
+Mexico;10;nombre10;apellido10;1;0;1;0;0;180;0
+Mexico;11;nombre11;apellido11;1;0;0;0;0;90;0
+Mexico;12;nombre12;apellido12;1;0;0;0;1;270;0
+Mexico;13;nombre13;apellido13;2;0;0;0;1;270;0
+Mexico;14;nombre14;apellido14;3;0;0;0;0;180;0
+Mexico;15;nombre15;apellido15;1;0;0;0;0;270;0
+Mexico;16;nombre16;apellido16;0;0;0;0;0;180;0
+Mexico;17;nombre17;apellido17;0;0;1;0;2;180;0
+Mexico;18;nombre18;apellido18;0;0;1;0;0;90;0
+Mexico;19;nombre19;apellido19;0;0;0;0;0;0;0
+Mexico;20;nombre20;apellido20;0;0;0;0;0;180;0
+Mexico;21;nombre21;apellido21;0;0;0;0;0;90;0
+Mexico;22;nombre22;apellido22;0;0;0;0;0;0;0
+Mexico;23;nombre23;apellido23;0;0;0;0;0;90;0
+Mexico;24;nombre24;apellido24;0;0;0;0;0;90;0
+Mexico;25;nombre25;apellido25;0;0;0;0;0;0;0
+Mexico;26;nombre26;apellido26;0;0;0;0;0;90;0
+United States;1;nombre1;apellido1;1;0;0;0;0;180;0
+United States;2;nombre2;apellido2;2;0;0;0;0;90;0
+United States;3;nombre3;apellido3;1;0;0;0;0;180;0
+United States;4;nombre4;apellido4;2;0;0;0;0;90;0
+United States;5;nombre5;apellido5;2;0;0;0;0;90;0
+United States;6;nombre6;apellido6;1;0;0;0;0;0;0
+United States;7;nombre7;apellido7;1;0;0;0;0;90;0
+United States;8;nombre8;apellido8;1;0;0;0;0;270;0
+United States;9;nombre9;apellido9;1;0;0;0;0;0;0
+United States;10;nombre10;apellido10;1;0;1;0;0;180;0
+United States;11;nombre11;apellido11;1;0;0;0;0;0;0
+United States;12;nombre12;apellido12;1;0;0;0;1;90;0
+United States;13;nombre13;apellido13;1;0;0;0;0;180;0
+United States;14;nombre14;apellido14;1;0;0;0;0;90;0
+United States;15;nombre15;apellido15;1;0;0;0;0;90;0
+United States;16;nombre16;apellido16;1;0;0;0;0;90;0
+United States;17;nombre17;apellido17;0;0;1;0;1;180;0
+United States;18;nombre18;apellido18;0;0;0;0;0;90;0
+United States;19;nombre19;apellido19;0;0;0;0;1;270;0
+United States;20;nombre20;apellido20;1;0;2;0;0;180;0
+United States;21;nombre21;apellido21;0;0;1;0;0;180;0
+United States;22;nombre22;apellido22;0;0;0;0;0;180;0
+United States;23;nombre23;apellido23;0;0;1;0;0;90;0
+United States;24;nombre24;apellido24;0;0;0;0;0;0;0
+United States;25;nombre25;apellido25;0;0;0;0;0;90;0
+United States;26;nombre26;apellido26;0;0;0;0;0;0;0
+Japan;1;nombre1;apellido1;1;0;0;0;0;270;0
+Japan;2;nombre2;apellido2;1;0;0;0;0;390;0
+Japan;3;nombre3;apellido3;1;0;0;0;0;390;0
+Japan;4;nombre4;apellido4;1;0;1;0;0;480;0
+Japan;5;nombre5;apellido5;2;0;0;0;0;360;0
+Japan;6;nombre6;apellido6;3;0;0;0;0;480;0
+Japan;7;nombre7;apellido7;1;0;0;0;0;270;0
+Japan;8;nombre8;apellido8;1;0;0;0;0;90;0
+Japan;9;nombre9;apellido9;1;0;0;0;0;180;0
+Japan;10;nombre10;apellido10;1;0;0;0;0;390;0
+Japan;11;nombre11;apellido11;2;0;0;0;0;390;0
+Japan;12;nombre12;apellido12;1;0;0;0;0;180;0
+Japan;13;nombre13;apellido13;3;0;0;0;0;300;0
+Japan;14;nombre14;apellido14;1;0;0;0;1;180;0
+Japan;15;nombre15;apellido15;1;0;0;0;2;570;0
+Japan;16;nombre16;apellido16;3;0;0;0;0;90;0
+Japan;17;nombre17;apellido17;3;0;0;0;2;570;0
+Japan;18;nombre18;apellido18;2;0;0;0;0;390;0
+Japan;19;nombre19;apellido19;1;0;0;0;0;270;0
+Japan;20;nombre20;apellido20;3;0;1;0;1;450;0
+Japan;21;nombre21;apellido21;1;0;1;0;0;300;0
+Japan;22;nombre22;apellido22;2;0;0;0;0;270;0
+Japan;23;nombre23;apellido23;3;0;0;0;0;270;0
+Japan;24;nombre24;apellido24;1;0;0;0;0;90;0
+Japan;25;nombre25;apellido25;0;0;1;0;1;450;0
+Japan;26;nombre26;apellido26;1;0;0;0;1;180;0
+Iran;1;nombre1;apellido1;2;0;1;0;0;180;0
+Iran;2;nombre2;apellido2;1;0;0;0;1;180;0
+Iran;3;nombre3;apellido3;1;0;0;0;0;180;0
+Iran;4;nombre4;apellido4;1;0;0;0;0;0;0
+Iran;5;nombre5;apellido5;1;0;0;0;0;180;0
+Iran;6;nombre6;apellido6;1;0;0;0;0;90;0
+Iran;7;nombre7;apellido7;1;0;0;0;0;180;0
+Iran;8;nombre8;apellido8;1;0;0;0;2;270;0
+Iran;9;nombre9;apellido9;1;0;0;0;0;270;0
+Iran;10;nombre10;apellido10;1;0;0;0;0;90;0
+Iran;11;nombre11;apellido11;1;0;0;0;0;180;0
+Iran;12;nombre12;apellido12;1;0;1;0;0;90;0
+Iran;13;nombre13;apellido13;2;0;1;0;0;180;0
+Iran;14;nombre14;apellido14;1;0;0;0;0;90;0
+Iran;15;nombre15;apellido15;1;0;0;0;0;270;0
+Iran;16;nombre16;apellido16;1;0;0;0;0;90;0
+Iran;17;nombre17;apellido17;0;0;0;0;1;270;0
+Iran;18;nombre18;apellido18;0;0;0;0;0;0;0
+Iran;19;nombre19;apellido19;1;0;0;0;1;180;0
+Iran;20;nombre20;apellido20;0;0;0;0;0;180;0
+Iran;21;nombre21;apellido21;4;0;0;0;0;180;0
+Iran;22;nombre22;apellido22;0;0;1;0;0;270;0
+Iran;23;nombre23;apellido23;0;0;0;0;0;270;0
+Iran;24;nombre24;apellido24;0;0;0;0;0;90;0
+Iran;25;nombre25;apellido25;0;0;0;0;0;0;0
+Iran;26;nombre26;apellido26;0;0;0;0;0;0;0
+Senegal;1;nombre1;apellido1;1;0;0;0;1;90;0
+Senegal;2;nombre2;apellido2;1;0;0;0;0;180;0
+Senegal;3;nombre3;apellido3;1;0;0;0;0;90;0
+Senegal;4;nombre4;apellido4;1;0;0;0;0;210;0
+Senegal;5;nombre5;apellido5;1;0;0;0;1;300;0
+Senegal;6;nombre6;apellido6;1;0;0;0;0;0;0
+Senegal;7;nombre7;apellido7;1;0;0;0;0;300;0
+Senegal;8;nombre8;apellido8;1;0;0;0;0;270;0
+Senegal;9;nombre9;apellido9;1;0;1;0;0;210;0
+Senegal;10;nombre10;apellido10;1;0;0;0;0;0;0
+Senegal;11;nombre11;apellido11;1;0;0;0;0;210;0
+Senegal;12;nombre12;apellido12;0;0;0;0;1;180;0
+Senegal;13;nombre13;apellido13;0;0;0;0;0;90;0
+Senegal;14;nombre14;apellido14;0;0;1;0;0;300;0
+Senegal;15;nombre15;apellido15;0;0;0;0;0;120;0
+Senegal;16;nombre16;apellido16;0;0;0;0;0;90;0
+Senegal;17;nombre17;apellido17;0;0;0;0;1;180;0
+Senegal;18;nombre18;apellido18;1;0;0;0;0;120;0
+Senegal;19;nombre19;apellido19;0;0;0;0;0;180;0
+Senegal;20;nombre20;apellido20;2;0;0;0;0;90;0
+Senegal;21;nombre21;apellido21;1;0;0;0;0;180;0
+Senegal;22;nombre22;apellido22;0;0;0;0;0;210;0
+Senegal;23;nombre23;apellido23;2;0;0;0;1;300;0
+Senegal;24;nombre24;apellido24;0;0;0;0;0;90;0
+Senegal;25;nombre25;apellido25;0;0;0;0;0;180;0
+Senegal;26;nombre26;apellido26;0;0;0;0;0;120;0
+Denmark;1;nombre1;apellido1;1;0;0;0;1;270;0
+Denmark;2;nombre2;apellido2;1;0;0;0;0;330;0
+Denmark;3;nombre3;apellido3;1;0;0;0;0;390;0
+Denmark;4;nombre4;apellido4;2;0;0;0;0;210;0
+Denmark;5;nombre5;apellido5;1;0;0;0;1;180;0
+Denmark;6;nombre6;apellido6;1;0;0;0;1;300;0
+Denmark;7;nombre7;apellido7;3;0;0;0;0;120;0
+Denmark;8;nombre8;apellido8;1;0;0;0;0;240;0
+Denmark;9;nombre9;apellido9;1;0;0;0;0;210;0
+Denmark;10;nombre10;apellido10;3;0;0;0;0;90;0
+Denmark;11;nombre11;apellido11;2;0;0;0;0;300;0
+Denmark;12;nombre12;apellido12;1;0;0;0;0;210;0
+Denmark;13;nombre13;apellido13;1;0;0;0;0;90;0
+Denmark;14;nombre14;apellido14;1;0;1;0;1;270;0
+Denmark;15;nombre15;apellido15;1;0;0;0;0;300;0
+Denmark;16;nombre16;apellido16;3;0;0;0;0;330;0
+Denmark;17;nombre17;apellido17;1;0;0;0;0;300;0
+Denmark;18;nombre18;apellido18;0;0;0;0;1;120;0
+Denmark;19;nombre19;apellido19;0;0;0;0;0;120;0
+Denmark;20;nombre20;apellido20;0;0;0;0;0;0;0
+Denmark;21;nombre21;apellido21;2;0;0;0;0;420;0
+Denmark;22;nombre22;apellido22;0;0;0;0;0;330;0
+Denmark;23;nombre23;apellido23;0;0;0;0;1;90;0
+Denmark;24;nombre24;apellido24;0;0;0;0;0;180;0
+Denmark;25;nombre25;apellido25;0;0;1;0;0;210;0
+Denmark;26;nombre26;apellido26;0;0;0;0;0;0;0
+Austria;1;nombre1;apellido1;1;0;2;0;1;300;0
+Austria;2;nombre2;apellido2;1;0;0;0;0;0;0
+Austria;3;nombre3;apellido3;1;0;1;0;0;180;0
+Austria;4;nombre4;apellido4;1;0;1;0;0;90;0
+Austria;5;nombre5;apellido5;1;0;0;0;0;300;0
+Austria;6;nombre6;apellido6;1;0;0;0;0;0;0
+Austria;7;nombre7;apellido7;1;0;0;0;0;210;0
+Austria;8;nombre8;apellido8;1;0;0;0;0;0;0
+Austria;9;nombre9;apellido9;1;0;0;0;0;210;0
+Austria;10;nombre10;apellido10;3;0;0;0;0;90;0
+Austria;11;nombre11;apellido11;1;0;0;0;0;270;0
+Austria;12;nombre12;apellido12;1;0;0;0;0;180;0
+Austria;13;nombre13;apellido13;1;0;0;0;0;210;0
+Austria;14;nombre14;apellido14;1;0;0;0;0;180;0
+Austria;15;nombre15;apellido15;3;0;0;0;0;300;0
+Austria;16;nombre16;apellido16;1;0;0;0;0;120;0
+Austria;17;nombre17;apellido17;0;0;0;0;0;0;0
+Austria;18;nombre18;apellido18;0;0;0;0;1;90;0
+Austria;19;nombre19;apellido19;0;0;0;0;0;90;0
+Austria;20;nombre20;apellido20;1;0;0;0;0;180;0
+Austria;21;nombre21;apellido21;0;0;0;0;0;0;0
+Austria;22;nombre22;apellido22;0;0;0;0;0;270;0
+Austria;23;nombre23;apellido23;0;0;0;0;0;210;0
+Austria;24;nombre24;apellido24;2;0;0;0;1;390;0
+Austria;25;nombre25;apellido25;0;0;0;0;0;210;0
+Austria;26;nombre26;apellido26;0;0;0;0;0;210;0
+Korea Republic;1;nombre1;apellido1;1;0;0;0;0;90;0
+Korea Republic;2;nombre2;apellido2;2;0;0;0;2;360;0
+Korea Republic;3;nombre3;apellido3;1;0;0;0;2;270;0
+Korea Republic;4;nombre4;apellido4;1;0;0;0;0;180;0
+Korea Republic;5;nombre5;apellido5;1;0;0;0;0;90;0
+Korea Republic;6;nombre6;apellido6;1;0;0;0;0;90;0
+Korea Republic;7;nombre7;apellido7;3;0;2;1;0;180;0
+Korea Republic;8;nombre8;apellido8;1;0;0;0;0;90;0
+Korea Republic;9;nombre9;apellido9;1;0;0;0;0;180;0
+Korea Republic;10;nombre10;apellido10;2;0;0;0;0;180;0
+Korea Republic;11;nombre11;apellido11;1;0;0;0;0;90;0
+Korea Republic;12;nombre12;apellido12;1;0;0;0;0;0;0
+Korea Republic;13;nombre13;apellido13;1;0;0;0;0;180;0
+Korea Republic;14;nombre14;apellido14;1;0;0;0;0;180;0
+Korea Republic;15;nombre15;apellido15;0;0;0;0;0;90;0
+Korea Republic;16;nombre16;apellido16;0;0;0;0;0;90;0
+Korea Republic;17;nombre17;apellido17;0;0;0;0;0;90;0
+Korea Republic;18;nombre18;apellido18;2;0;0;0;1;270;0
+Korea Republic;19;nombre19;apellido19;0;0;0;0;0;0;0
+Korea Republic;20;nombre20;apellido20;0;0;0;0;0;90;0
+Korea Republic;21;nombre21;apellido21;1;0;0;0;0;270;0
+Korea Republic;22;nombre22;apellido22;0;0;0;0;0;180;0
+Korea Republic;23;nombre23;apellido23;0;0;0;0;0;180;0
+Korea Republic;24;nombre24;apellido24;0;0;0;0;0;270;0
+Korea Republic;25;nombre25;apellido25;0;0;0;0;1;270;0
+Korea Republic;26;nombre26;apellido26;0;0;0;0;0;0;0
+Australia;1;nombre1;apellido1;1;0;0;0;1;180;0
+Australia;2;nombre2;apellido2;1;0;1;0;0;180;0
+Australia;3;nombre3;apellido3;1;0;0;0;0;90;0
+Australia;4;nombre4;apellido4;1;0;0;0;0;90;0
+Australia;5;nombre5;apellido5;1;0;1;0;0;180;0
+Australia;6;nombre6;apellido6;3;0;0;0;0;180;0
+Australia;7;nombre7;apellido7;1;0;0;0;1;180;0
+Australia;8;nombre8;apellido8;1;0;0;0;0;0;0
+Australia;9;nombre9;apellido9;1;0;0;0;0;90;0
+Australia;10;nombre10;apellido10;1;0;0;0;0;180;0
+Australia;11;nombre11;apellido11;1;0;0;0;0;90;0
+Australia;12;nombre12;apellido12;1;0;0;0;0;0;0
+Australia;13;nombre13;apellido13;1;0;0;0;1;180;0
+Australia;14;nombre14;apellido14;1;0;0;0;0;90;0
+Australia;15;nombre15;apellido15;0;0;0;0;0;90;0
+Australia;16;nombre16;apellido16;1;0;0;0;0;270;0
+Australia;17;nombre17;apellido17;0;0;0;0;1;90;0
+Australia;18;nombre18;apellido18;0;0;0;0;0;90;0
+Australia;19;nombre19;apellido19;0;0;0;0;1;90;0
+Australia;20;nombre20;apellido20;0;0;0;0;1;180;0
+Australia;21;nombre21;apellido21;1;0;0;0;0;90;0
+Australia;22;nombre22;apellido22;0;0;0;0;0;0;0
+Australia;23;nombre23;apellido23;0;0;0;0;1;90;0
+Australia;24;nombre24;apellido24;0;0;0;0;0;90;0
+Australia;25;nombre25;apellido25;0;0;1;0;0;90;0
+Australia;26;nombre26;apellido26;0;0;0;0;0;90;0
+Turkey;1;nombre1;apellido1;1;0;0;0;0;180;0
+Turkey;2;nombre2;apellido2;2;0;0;0;0;180;0
+Turkey;3;nombre3;apellido3;1;0;0;0;0;180;0
+Turkey;4;nombre4;apellido4;1;0;0;0;1;270;0
+Turkey;5;nombre5;apellido5;1;0;0;0;0;90;0
+Turkey;6;nombre6;apellido6;2;0;0;0;0;180;0
+Turkey;7;nombre7;apellido7;1;0;0;0;0;180;0
+Turkey;8;nombre8;apellido8;1;0;0;0;0;180;0
+Turkey;9;nombre9;apellido9;1;0;0;0;2;180;0
+Turkey;10;nombre10;apellido10;1;0;0;0;0;270;0
+Turkey;11;nombre11;apellido11;1;0;0;0;0;270;0
+Turkey;12;nombre12;apellido12;1;0;0;0;0;90;0
+Turkey;13;nombre13;apellido13;1;0;0;0;0;90;0
+Turkey;14;nombre14;apellido14;1;0;0;0;0;90;0
+Turkey;15;nombre15;apellido15;0;0;1;0;0;90;0
+Turkey;16;nombre16;apellido16;0;0;0;0;0;90;0
+Turkey;17;nombre17;apellido17;0;0;0;0;0;180;0
+Turkey;18;nombre18;apellido18;0;0;0;0;0;0;0
+Turkey;19;nombre19;apellido19;0;0;0;0;0;270;0
+Turkey;20;nombre20;apellido20;0;0;0;0;0;90;0
+Turkey;21;nombre21;apellido21;0;0;2;0;0;180;0
+Turkey;22;nombre22;apellido22;1;0;1;0;1;270;0
+Turkey;23;nombre23;apellido23;0;0;0;0;0;0;0
+Turkey;24;nombre24;apellido24;0;0;0;0;0;90;0
+Turkey;25;nombre25;apellido25;0;0;0;0;0;90;0
+Turkey;26;nombre26;apellido26;2;0;0;0;0;180;0
+Serbia;1;nombre1;apellido1;2;0;0;0;1;360;0
+Serbia;2;nombre2;apellido2;1;0;0;0;0;90;0
+Serbia;3;nombre3;apellido3;1;0;0;0;0;90;0
+Serbia;4;nombre4;apellido4;1;0;0;0;0;180;0
+Serbia;5;nombre5;apellido5;1;0;0;0;0;90;0
+Serbia;6;nombre6;apellido6;1;0;0;0;0;270;0
+Serbia;7;nombre7;apellido7;1;0;0;0;0;90;0
+Serbia;8;nombre8;apellido8;2;0;1;0;0;180;0
+Serbia;9;nombre9;apellido9;1;0;0;0;0;90;0
+Serbia;10;nombre10;apellido10;1;0;0;0;0;270;0
+Serbia;11;nombre11;apellido11;2;0;0;0;1;180;0
+Serbia;12;nombre12;apellido12;1;0;0;0;0;90;0
+Serbia;13;nombre13;apellido13;1;0;0;0;1;180;0
+Serbia;14;nombre14;apellido14;3;0;0;0;0;180;0
+Serbia;15;nombre15;apellido15;0;0;0;0;0;180;0
+Serbia;16;nombre16;apellido16;0;0;0;0;0;0;0
+Serbia;17;nombre17;apellido17;0;0;0;0;0;360;0
+Serbia;18;nombre18;apellido18;0;0;0;0;0;180;0
+Serbia;19;nombre19;apellido19;0;0;0;0;0;180;0
+Serbia;20;nombre20;apellido20;0;0;0;0;0;90;0
+Serbia;21;nombre21;apellido21;0;0;0;0;0;90;0
+Serbia;22;nombre22;apellido22;0;0;0;0;0;180;0
+Serbia;23;nombre23;apellido23;0;0;0;0;1;90;0
+Serbia;24;nombre24;apellido24;0;0;0;0;0;180;0
+Serbia;25;nombre25;apellido25;0;0;0;0;0;90;0
+Serbia;26;nombre26;apellido26;0;0;0;0;0;0;0
+Sweden;1;nombre1;apellido1;1;0;0;0;0;0;0
+Sweden;2;nombre2;apellido2;1;0;0;0;0;90;0
+Sweden;3;nombre3;apellido3;1;0;0;0;0;180;0
+Sweden;4;nombre4;apellido4;1;0;0;0;0;90;0
+Sweden;5;nombre5;apellido5;2;0;0;0;0;180;0
+Sweden;6;nombre6;apellido6;1;0;0;0;0;90;0
+Sweden;7;nombre7;apellido7;1;0;0;0;1;90;0
+Sweden;8;nombre8;apellido8;1;0;0;0;0;90;0
+Sweden;9;nombre9;apellido9;1;0;0;0;0;0;0
+Sweden;10;nombre10;apellido10;1;0;0;0;1;90;0
+Sweden;11;nombre11;apellido11;1;0;0;0;0;0;0
+Sweden;12;nombre12;apellido12;1;0;0;0;1;270;0
+Sweden;13;nombre13;apellido13;1;0;0;0;0;0;0
+Sweden;14;nombre14;apellido14;1;0;0;0;0;180;0
+Sweden;15;nombre15;apellido15;1;0;0;0;0;180;0
+Sweden;16;nombre16;apellido16;0;0;0;0;0;90;0
+Sweden;17;nombre17;apellido17;2;0;0;0;0;270;0
+Sweden;18;nombre18;apellido18;0;0;0;0;0;90;0
+Sweden;19;nombre19;apellido19;0;0;0;0;0;180;0
+Sweden;20;nombre20;apellido20;0;0;0;0;0;270;0
+Sweden;21;nombre21;apellido21;0;0;0;0;0;0;0
+Sweden;22;nombre22;apellido22;0;0;0;0;0;90;0
+Sweden;23;nombre23;apellido23;0;0;0;0;0;0;0
+Sweden;24;nombre24;apellido24;0;0;0;0;0;180;0
+Sweden;25;nombre25;apellido25;0;0;0;0;0;90;0
+Sweden;26;nombre26;apellido26;0;0;0;0;0;180;0
+Egypt;1;nombre1;apellido1;5;0;0;0;0;480;0
+Egypt;2;nombre2;apellido2;1;0;1;0;0;180;0
+Egypt;3;nombre3;apellido3;1;0;0;0;0;450;0
+Egypt;4;nombre4;apellido4;3;0;0;0;2;390;0
+Egypt;5;nombre5;apellido5;1;0;0;0;0;360;0
+Egypt;6;nombre6;apellido6;1;0;0;0;0;390;0
+Egypt;7;nombre7;apellido7;1;0;1;0;2;360;0
+Egypt;8;nombre8;apellido8;1;0;0;0;0;210;0
+Egypt;9;nombre9;apellido9;1;0;0;0;1;480;0
+Egypt;10;nombre10;apellido10;1;0;0;0;0;180;0
+Egypt;11;nombre11;apellido11;1;0;0;0;1;270;0
+Egypt;12;nombre12;apellido12;2;0;0;0;2;570;0
+Egypt;13;nombre13;apellido13;1;0;0;0;0;450;0
+Egypt;14;nombre14;apellido14;2;0;0;0;0;300;0
+Egypt;15;nombre15;apellido15;3;0;1;0;0;270;0
+Egypt;16;nombre16;apellido16;1;0;1;0;1;480;0
+Egypt;17;nombre17;apellido17;3;0;0;0;0;180;0
+Egypt;18;nombre18;apellido18;1;0;1;0;1;270;0
+Egypt;19;nombre19;apellido19;0;0;0;0;1;180;0
+Egypt;20;nombre20;apellido20;2;0;0;0;0;90;0
+Egypt;21;nombre21;apellido21;0;0;1;0;1;180;0
+Egypt;22;nombre22;apellido22;0;0;0;0;1;300;0
+Egypt;23;nombre23;apellido23;0;0;0;0;1;390;0
+Egypt;24;nombre24;apellido24;2;0;0;0;0;180;0
+Egypt;25;nombre25;apellido25;0;0;1;0;0;270;0
+Egypt;26;nombre26;apellido26;0;0;0;0;0;390;0
+Canada;1;nombre1;apellido1;1;0;0;0;0;0;0
+Canada;2;nombre2;apellido2;1;0;0;0;0;0;0
+Canada;3;nombre3;apellido3;1;0;0;0;0;90;0
+Canada;4;nombre4;apellido4;1;0;0;0;0;90;0
+Canada;5;nombre5;apellido5;1;0;0;0;1;360;0
+Canada;6;nombre6;apellido6;1;0;0;0;0;90;0
+Canada;7;nombre7;apellido7;1;0;1;0;0;180;0
+Canada;8;nombre8;apellido8;1;0;0;0;0;180;0
+Canada;9;nombre9;apellido9;1;0;0;0;0;0;0
+Canada;10;nombre10;apellido10;1;0;0;0;0;0;0
+Canada;11;nombre11;apellido11;1;0;0;0;0;90;0
+Canada;12;nombre12;apellido12;2;0;0;0;0;180;0
+Canada;13;nombre13;apellido13;1;0;0;0;0;90;0
+Canada;14;nombre14;apellido14;1;0;0;0;0;180;0
+Canada;15;nombre15;apellido15;0;0;0;0;1;90;0
+Canada;16;nombre16;apellido16;0;0;1;0;0;360;0
+Canada;17;nombre17;apellido17;0;0;0;0;0;180;0
+Canada;18;nombre18;apellido18;0;0;0;0;0;270;0
+Canada;19;nombre19;apellido19;1;0;0;0;0;270;0
+Canada;20;nombre20;apellido20;0;0;0;0;0;90;0
+Canada;21;nombre21;apellido21;0;0;0;0;0;180;0
+Canada;22;nombre22;apellido22;2;0;0;0;0;270;0
+Canada;23;nombre23;apellido23;0;0;0;0;0;90;0
+Canada;24;nombre24;apellido24;1;0;0;0;0;270;0
+Canada;25;nombre25;apellido25;0;0;0;0;0;270;0
+Canada;26;nombre26;apellido26;0;0;0;0;0;90;0
+Paraguay;1;nombre1;apellido1;1;0;0;0;0;0;0
+Paraguay;2;nombre2;apellido2;1;0;0;0;1;90;0
+Paraguay;3;nombre3;apellido3;1;0;0;0;0;270;0
+Paraguay;4;nombre4;apellido4;1;0;0;0;0;90;0
+Paraguay;5;nombre5;apellido5;1;0;0;0;0;90;0
+Paraguay;6;nombre6;apellido6;1;0;0;0;0;0;0
+Paraguay;7;nombre7;apellido7;1;0;0;0;0;90;0
+Paraguay;8;nombre8;apellido8;1;0;0;0;0;0;0
+Paraguay;9;nombre9;apellido9;1;0;0;0;0;90;0
+Paraguay;10;nombre10;apellido10;1;0;0;0;0;0;0
+Paraguay;11;nombre11;apellido11;1;0;0;0;1;90;0
+Paraguay;12;nombre12;apellido12;1;0;0;0;0;180;0
+Paraguay;13;nombre13;apellido13;2;0;0;0;1;180;0
+Paraguay;14;nombre14;apellido14;0;0;0;0;0;90;0
+Paraguay;15;nombre15;apellido15;0;0;1;0;0;90;0
+Paraguay;16;nombre16;apellido16;0;0;0;0;0;180;0
+Paraguay;17;nombre17;apellido17;0;0;0;0;1;90;0
+Paraguay;18;nombre18;apellido18;0;0;0;0;1;180;0
+Paraguay;19;nombre19;apellido19;0;0;0;0;0;180;0
+Paraguay;20;nombre20;apellido20;0;0;0;0;0;90;0
+Paraguay;21;nombre21;apellido21;0;0;1;0;0;180;0
+Paraguay;22;nombre22;apellido22;1;0;0;0;0;180;0
+Paraguay;23;nombre23;apellido23;0;0;0;0;0;270;0
+Paraguay;24;nombre24;apellido24;1;0;0;0;2;180;0
+Paraguay;25;nombre25;apellido25;0;0;0;0;0;90;0
+Paraguay;26;nombre26;apellido26;0;0;0;0;0;0;0
+Panama;1;nombre1;apellido1;1;0;0;0;0;270;0
+Panama;2;nombre2;apellido2;1;0;0;0;0;90;0
+Panama;3;nombre3;apellido3;1;0;0;0;0;0;0
+Panama;4;nombre4;apellido4;1;0;0;0;0;180;0
+Panama;5;nombre5;apellido5;1;0;0;0;1;270;0
+Panama;6;nombre6;apellido6;1;0;0;0;0;180;0
+Panama;7;nombre7;apellido7;1;0;0;0;0;180;0
+Panama;8;nombre8;apellido8;1;0;0;0;0;90;0
+Panama;9;nombre9;apellido9;1;0;0;0;0;90;0
+Panama;10;nombre10;apellido10;1;0;0;0;0;0;0
+Panama;11;nombre11;apellido11;1;0;0;0;0;180;0
+Panama;12;nombre12;apellido12;0;0;0;0;0;90;0
+Panama;13;nombre13;apellido13;0;0;1;0;0;180;0
+Panama;14;nombre14;apellido14;0;0;0;0;0;0;0
+Panama;15;nombre15;apellido15;0;0;0;0;0;0;0
+Panama;16;nombre16;apellido16;0;0;0;0;0;90;0
+Panama;17;nombre17;apellido17;0;0;1;0;0;180;0
+Panama;18;nombre18;apellido18;0;0;0;0;1;180;0
+Panama;19;nombre19;apellido19;1;0;0;0;0;180;0
+Panama;20;nombre20;apellido20;2;0;0;0;0;90;0
+Panama;21;nombre21;apellido21;0;0;0;0;0;0;0
+Panama;22;nombre22;apellido22;0;0;0;0;0;0;0
+Panama;23;nombre23;apellido23;0;0;0;0;0;90;0
+Panama;24;nombre24;apellido24;0;0;1;0;0;90;0
+Panama;25;nombre25;apellido25;1;0;1;0;1;180;0
+Panama;26;nombre26;apellido26;0;0;0;0;0;90;0
+Nigeria;1;nombre1;apellido1;1;0;0;0;0;180;0
+Nigeria;2;nombre2;apellido2;1;0;0;0;0;180;0
+Nigeria;3;nombre3;apellido3;1;0;0;0;0;90;0
+Nigeria;4;nombre4;apellido4;2;0;0;0;1;180;0
+Nigeria;5;nombre5;apellido5;1;0;0;0;0;0;0
+Nigeria;6;nombre6;apellido6;1;0;0;0;1;180;0
+Nigeria;7;nombre7;apellido7;1;0;0;0;0;180;0
+Nigeria;8;nombre8;apellido8;1;0;0;0;0;180;0
+Nigeria;9;nombre9;apellido9;1;0;0;0;0;90;0
+Nigeria;10;nombre10;apellido10;1;0;0;0;0;180;0
+Nigeria;11;nombre11;apellido11;0;0;0;0;0;0;0
+Nigeria;12;nombre12;apellido12;0;0;0;0;1;90;0
+Nigeria;13;nombre13;apellido13;2;0;0;0;1;180;0
+Nigeria;14;nombre14;apellido14;0;0;0;0;0;90;0
+Nigeria;15;nombre15;apellido15;0;0;0;0;0;0;0
+Nigeria;16;nombre16;apellido16;0;0;0;0;0;90;0
+Nigeria;17;nombre17;apellido17;0;0;0;0;0;0;0
+Nigeria;18;nombre18;apellido18;0;0;0;0;0;90;0
+Nigeria;19;nombre19;apellido19;0;0;0;0;1;90;0
+Nigeria;20;nombre20;apellido20;0;0;1;0;0;90;0
+Nigeria;21;nombre21;apellido21;0;0;0;0;0;90;0
+Nigeria;22;nombre22;apellido22;0;0;0;0;0;180;0
+Nigeria;23;nombre23;apellido23;0;0;0;0;1;90;0
+Nigeria;24;nombre24;apellido24;0;0;0;0;1;180;0
+Nigeria;25;nombre25;apellido25;1;0;0;0;0;180;0
+Nigeria;26;nombre26;apellido26;0;0;0;0;0;90;0
+Costa Rica;1;nombre1;apellido1;1;0;0;0;0;90;0
+Costa Rica;2;nombre2;apellido2;1;0;0;0;0;180;0
+Costa Rica;3;nombre3;apellido3;1;0;0;0;0;90;0
+Costa Rica;4;nombre4;apellido4;1;0;0;0;0;90;0
+Costa Rica;5;nombre5;apellido5;1;0;0;0;0;180;0
+Costa Rica;6;nombre6;apellido6;1;0;0;0;0;0;0
+Costa Rica;7;nombre7;apellido7;1;0;0;0;0;0;0
+Costa Rica;8;nombre8;apellido8;1;0;0;0;0;180;0
+Costa Rica;9;nombre9;apellido9;1;0;0;0;0;180;0
+Costa Rica;10;nombre10;apellido10;1;0;1;0;0;180;0
+Costa Rica;11;nombre11;apellido11;0;0;0;0;0;180;0
+Costa Rica;12;nombre12;apellido12;0;0;0;0;2;270;0
+Costa Rica;13;nombre13;apellido13;1;0;0;0;0;90;0
+Costa Rica;14;nombre14;apellido14;0;0;0;0;0;90;0
+Costa Rica;15;nombre15;apellido15;0;0;0;0;0;90;0
+Costa Rica;16;nombre16;apellido16;0;0;0;0;0;90;0
+Costa Rica;17;nombre17;apellido17;0;0;0;0;0;180;0
+Costa Rica;18;nombre18;apellido18;0;0;0;0;0;0;0
+Costa Rica;19;nombre19;apellido19;0;0;0;0;0;180;0
+Costa Rica;20;nombre20;apellido20;1;0;0;0;0;90;0
+Costa Rica;21;nombre21;apellido21;0;0;0;0;0;90;0
+Costa Rica;22;nombre22;apellido22;0;0;0;0;0;90;0
+Costa Rica;23;nombre23;apellido23;0;0;0;0;0;180;0
+Costa Rica;24;nombre24;apellido24;0;0;0;0;0;90;0
+Costa Rica;25;nombre25;apellido25;1;0;0;0;0;90;0
+Costa Rica;26;nombre26;apellido26;0;0;0;0;0;0;0
+Tunisia;1;nombre1;apellido1;1;0;0;0;0;120;0
+Tunisia;2;nombre2;apellido2;1;0;0;0;0;420;0
+Tunisia;3;nombre3;apellido3;1;0;0;0;0;180;0
+Tunisia;4;nombre4;apellido4;1;0;0;0;0;90;0
+Tunisia;5;nombre5;apellido5;1;0;0;0;0;240;0
+Tunisia;6;nombre6;apellido6;2;0;0;0;0;210;0
+Tunisia;7;nombre7;apellido7;1;0;0;0;0;210;0
+Tunisia;8;nombre8;apellido8;1;0;0;0;0;90;0
+Tunisia;9;nombre9;apellido9;1;0;0;0;0;300;0
+Tunisia;10;nombre10;apellido10;1;0;1;0;0;210;0
+Tunisia;11;nombre11;apellido11;0;0;0;0;0;210;0
+Tunisia;12;nombre12;apellido12;0;0;0;0;0;90;0
+Tunisia;13;nombre13;apellido13;0;0;0;0;0;210;0
+Tunisia;14;nombre14;apellido14;0;0;0;0;0;90;0
+Tunisia;15;nombre15;apellido15;0;0;0;0;0;330;0
+Tunisia;16;nombre16;apellido16;0;0;0;0;0;90;0
+Tunisia;17;nombre17;apellido17;0;0;0;0;0;0;0
+Tunisia;18;nombre18;apellido18;0;0;0;0;0;210;0
+Tunisia;19;nombre19;apellido19;2;0;0;0;1;210;0
+Tunisia;20;nombre20;apellido20;0;0;0;0;0;180;0
+Tunisia;21;nombre21;apellido21;0;0;0;0;0;300;0
+Tunisia;22;nombre22;apellido22;1;0;0;0;0;330;0
+Tunisia;23;nombre23;apellido23;0;0;0;0;0;300;0
+Tunisia;24;nombre24;apellido24;1;0;0;0;0;180;0
+Tunisia;25;nombre25;apellido25;1;0;0;0;0;300;0
+Tunisia;26;nombre26;apellido26;0;0;0;0;1;510;0
+Czech Republic;1;nombre1;apellido1;1;0;0;0;0;180;0
+Czech Republic;2;nombre2;apellido2;1;0;0;0;0;90;0
+Czech Republic;3;nombre3;apellido3;1;0;0;0;0;90;0
+Czech Republic;4;nombre4;apellido4;1;0;0;0;0;0;0
+Czech Republic;5;nombre5;apellido5;1;0;0;0;2;180;0
+Czech Republic;6;nombre6;apellido6;2;0;1;0;0;180;0
+Czech Republic;7;nombre7;apellido7;1;0;0;0;0;180;0
+Czech Republic;8;nombre8;apellido8;2;0;0;0;0;180;0
+Czech Republic;9;nombre9;apellido9;1;0;1;0;0;180;0
+Czech Republic;10;nombre10;apellido10;1;0;0;0;0;0;0
+Czech Republic;11;nombre11;apellido11;1;0;1;0;0;180;0
+Czech Republic;12;nombre12;apellido12;0;0;0;0;0;90;0
+Czech Republic;13;nombre13;apellido13;1;0;0;0;0;90;0
+Czech Republic;14;nombre14;apellido14;0;0;0;0;0;90;0
+Czech Republic;15;nombre15;apellido15;0;0;0;0;0;0;0
+Czech Republic;16;nombre16;apellido16;0;0;0;0;0;90;0
+Czech Republic;17;nombre17;apellido17;0;0;0;0;1;90;0
+Czech Republic;18;nombre18;apellido18;0;0;0;0;0;90;0
+Czech Republic;19;nombre19;apellido19;0;0;0;0;1;180;0
+Czech Republic;20;nombre20;apellido20;0;0;0;0;1;90;0
+Czech Republic;21;nombre21;apellido21;0;0;0;0;0;270;0
+Czech Republic;22;nombre22;apellido22;0;0;0;0;0;0;0
+Czech Republic;23;nombre23;apellido23;0;0;0;0;0;0;0
+Czech Republic;24;nombre24;apellido24;0;0;1;0;0;180;0
+Czech Republic;25;nombre25;apellido25;1;0;0;0;0;180;0
+Czech Republic;26;nombre26;apellido26;0;0;0;0;0;90;0
+Qatar;1;nombre1;apellido1;1;0;0;0;0;210;0
+Qatar;2;nombre2;apellido2;3;0;0;0;0;390;0
+Qatar;3;nombre3;apellido3;1;0;0;0;0;210;0
+Qatar;4;nombre4;apellido4;1;0;0;0;0;0;0
+Qatar;5;nombre5;apellido5;1;0;0;0;0;300;0
+Qatar;6;nombre6;apellido6;1;0;0;0;0;90;0
+Qatar;7;nombre7;apellido7;1;0;0;0;0;180;0
+Qatar;8;nombre8;apellido8;1;0;0;0;0;0;0
+Qatar;9;nombre9;apellido9;1;0;0;0;0;210;0
+Qatar;10;nombre10;apellido10;1;0;0;0;1;180;0
+Qatar;11;nombre11;apellido11;1;0;0;0;0;180;0
+Qatar;12;nombre12;apellido12;1;0;0;0;1;180;0
+Qatar;13;nombre13;apellido13;3;0;0;0;1;300;0
+Qatar;14;nombre14;apellido14;1;0;0;0;2;210;0
+Qatar;15;nombre15;apellido15;1;0;0;0;0;0;0
+Qatar;16;nombre16;apellido16;1;0;0;0;0;90;0
+Qatar;17;nombre17;apellido17;1;0;0;0;0;210;0
+Qatar;18;nombre18;apellido18;0;0;0;0;0;90;0
+Qatar;19;nombre19;apellido19;0;0;0;0;1;210;0
+Qatar;20;nombre20;apellido20;0;0;0;0;0;90;0
+Qatar;21;nombre21;apellido21;0;0;0;0;0;0;0
+Qatar;22;nombre22;apellido22;4;0;0;0;0;210;0
+Qatar;23;nombre23;apellido23;0;0;0;0;1;300;0
+Qatar;24;nombre24;apellido24;0;0;0;0;0;180;0
+Qatar;25;nombre25;apellido25;0;0;0;0;1;180;0
+Qatar;26;nombre26;apellido26;0;0;0;0;0;90;0
+Cameroon;1;nombre1;apellido1;1;0;0;0;0;270;0
+Cameroon;2;nombre2;apellido2;3;0;0;0;1;180;0
+Cameroon;3;nombre3;apellido3;3;0;2;1;0;270;0
+Cameroon;4;nombre4;apellido4;1;0;0;0;1;210;0
+Cameroon;5;nombre5;apellido5;1;0;0;0;0;270;0
+Cameroon;6;nombre6;apellido6;1;0;0;0;0;120;0
+Cameroon;7;nombre7;apellido7;1;0;0;0;1;180;0
+Cameroon;8;nombre8;apellido8;1;0;0;0;0;0;0
+Cameroon;9;nombre9;apellido9;3;0;0;0;0;180;0
+Cameroon;10;nombre10;apellido10;1;0;0;0;0;90;0
+Cameroon;11;nombre11;apellido11;1;0;0;0;0;90;0
+Cameroon;12;nombre12;apellido12;1;0;0;0;0;0;0
+Cameroon;13;nombre13;apellido13;1;0;0;0;0;120;0
+Cameroon;14;nombre14;apellido14;1;0;0;0;1;120;0
+Cameroon;15;nombre15;apellido15;1;0;0;0;0;210;0
+Cameroon;16;nombre16;apellido16;1;0;0;0;0;180;0
+Cameroon;17;nombre17;apellido17;0;0;0;0;0;300;0
+Cameroon;18;nombre18;apellido18;2;0;0;0;0;300;0
+Cameroon;19;nombre19;apellido19;0;0;0;0;1;210;0
+Cameroon;20;nombre20;apellido20;0;0;0;0;0;90;0
+Cameroon;21;nombre21;apellido21;0;0;0;0;0;120;0
+Cameroon;22;nombre22;apellido22;0;0;0;0;0;120;0
+Cameroon;23;nombre23;apellido23;0;0;0;0;0;180;0
+Cameroon;24;nombre24;apellido24;0;0;0;0;0;90;0
+Cameroon;25;nombre25;apellido25;0;0;0;0;0;90;0
+Cameroon;26;nombre26;apellido26;0;0;0;0;0;300;0
+Scotland;1;nombre1;apellido1;1;0;0;0;0;180;0
+Scotland;2;nombre2;apellido2;1;0;0;0;1;90;0
+Scotland;3;nombre3;apellido3;1;0;0;0;0;180;0
+Scotland;4;nombre4;apellido4;1;0;0;0;0;180;0
+Scotland;5;nombre5;apellido5;2;0;0;0;0;90;0
+Scotland;6;nombre6;apellido6;1;0;0;0;0;90;0
+Scotland;7;nombre7;apellido7;1;0;0;0;0;90;0
+Scotland;8;nombre8;apellido8;1;0;0;0;0;90;0
+Scotland;9;nombre9;apellido9;1;0;0;0;0;90;0
+Scotland;10;nombre10;apellido10;2;0;0;0;0;180;0
+Scotland;11;nombre11;apellido11;1;0;0;0;0;0;0
+Scotland;12;nombre12;apellido12;0;0;0;0;0;90;0
+Scotland;13;nombre13;apellido13;0;0;0;0;0;0;0
+Scotland;14;nombre14;apellido14;0;0;0;0;0;90;0
+Scotland;15;nombre15;apellido15;0;0;0;0;0;90;0
+Scotland;16;nombre16;apellido16;0;0;0;0;0;180;0
+Scotland;17;nombre17;apellido17;1;0;0;0;0;180;0
+Scotland;18;nombre18;apellido18;0;0;0;0;0;0;0
+Scotland;19;nombre19;apellido19;0;0;0;0;0;180;0
+Scotland;20;nombre20;apellido20;0;0;0;0;0;180;0
+Scotland;21;nombre21;apellido21;0;0;0;0;0;90;0
+Scotland;22;nombre22;apellido22;0;0;0;0;0;90;0
+Scotland;23;nombre23;apellido23;0;0;0;0;0;0;0
+Scotland;24;nombre24;apellido24;0;0;0;0;0;180;0
+Scotland;25;nombre25;apellido25;0;0;0;0;0;180;0
+Scotland;26;nombre26;apellido26;0;0;0;0;0;180;0
+Uzbekistan;1;nombre1;apellido1;1;0;0;0;0;90;0
+Uzbekistan;2;nombre2;apellido2;2;0;0;0;0;270;0
+Uzbekistan;3;nombre3;apellido3;2;0;0;0;0;90;0
+Uzbekistan;4;nombre4;apellido4;1;0;0;0;0;180;0
+Uzbekistan;5;nombre5;apellido5;1;0;0;0;0;180;0
+Uzbekistan;6;nombre6;apellido6;1;0;0;0;0;180;0
+Uzbekistan;7;nombre7;apellido7;3;0;0;0;0;180;0
+Uzbekistan;8;nombre8;apellido8;1;0;1;0;0;270;0
+Uzbekistan;9;nombre9;apellido9;1;0;0;0;0;180;0
+Uzbekistan;10;nombre10;apellido10;1;0;0;0;1;270;0
+Uzbekistan;11;nombre11;apellido11;1;0;0;0;0;0;0
+Uzbekistan;12;nombre12;apellido12;0;0;0;0;1;180;0
+Uzbekistan;13;nombre13;apellido13;0;0;0;0;1;360;0
+Uzbekistan;14;nombre14;apellido14;0;0;0;0;0;180;0
+Uzbekistan;15;nombre15;apellido15;0;0;0;0;0;0;0
+Uzbekistan;16;nombre16;apellido16;0;0;0;0;0;270;0
+Uzbekistan;17;nombre17;apellido17;0;0;0;0;0;180;0
+Uzbekistan;18;nombre18;apellido18;0;0;0;0;0;0;0
+Uzbekistan;19;nombre19;apellido19;0;0;0;0;0;180;0
+Uzbekistan;20;nombre20;apellido20;0;0;0;0;0;0;0
+Uzbekistan;21;nombre21;apellido21;0;0;0;0;0;270;0
+Uzbekistan;22;nombre22;apellido22;0;0;0;0;0;90;0
+Uzbekistan;23;nombre23;apellido23;0;0;0;0;0;0;0
+Uzbekistan;24;nombre24;apellido24;0;0;0;0;0;90;0
+Uzbekistan;25;nombre25;apellido25;1;0;0;0;0;90;0
+Uzbekistan;26;nombre26;apellido26;0;0;0;0;0;180;0
+South Africa;1;nombre1;apellido1;1;0;1;0;0;180;0
+South Africa;2;nombre2;apellido2;2;0;1;0;0;270;0
+South Africa;3;nombre3;apellido3;1;0;0;0;1;270;0
+South Africa;4;nombre4;apellido4;1;0;0;0;0;90;0
+South Africa;5;nombre5;apellido5;1;0;0;0;0;90;0
+South Africa;6;nombre6;apellido6;1;0;0;0;0;90;0
+South Africa;7;nombre7;apellido7;1;0;0;0;0;270;0
+South Africa;8;nombre8;apellido8;1;0;0;0;0;0;0
+South Africa;9;nombre9;apellido9;3;0;0;0;0;90;0
+South Africa;10;nombre10;apellido10;1;0;0;0;0;90;0
+South Africa;11;nombre11;apellido11;0;0;0;0;0;90;0
+South Africa;12;nombre12;apellido12;0;0;0;0;1;90;0
+South Africa;13;nombre13;apellido13;0;0;0;0;0;90;0
+South Africa;14;nombre14;apellido14;0;0;0;0;1;90;0
+South Africa;15;nombre15;apellido15;0;0;0;0;0;0;0
+South Africa;16;nombre16;apellido16;0;0;0;0;0;90;0
+South Africa;17;nombre17;apellido17;0;0;0;0;0;0;0
+South Africa;18;nombre18;apellido18;0;0;0;0;0;0;0
+South Africa;19;nombre19;apellido19;0;0;0;0;0;180;0
+South Africa;20;nombre20;apellido20;0;0;0;0;0;270;0
+South Africa;21;nombre21;apellido21;0;0;0;0;0;180;0
+South Africa;22;nombre22;apellido22;0;0;0;0;0;90;0
+South Africa;23;nombre23;apellido23;0;0;0;0;0;90;0
+South Africa;24;nombre24;apellido24;0;0;0;0;0;180;0
+South Africa;25;nombre25;apellido25;0;0;0;0;0;0;0
+South Africa;26;nombre26;apellido26;1;0;0;0;0;90;0
+Saudi Arabia;1;nombre1;apellido1;1;0;0;0;0;180;0
+Saudi Arabia;2;nombre2;apellido2;2;0;0;0;0;90;0
+Saudi Arabia;3;nombre3;apellido3;2;0;0;0;0;90;0
+Saudi Arabia;4;nombre4;apellido4;1;0;0;0;0;0;0
+Saudi Arabia;5;nombre5;apellido5;1;0;0;0;0;270;0
+Saudi Arabia;6;nombre6;apellido6;1;0;0;0;0;180;0
+Saudi Arabia;7;nombre7;apellido7;1;0;1;0;0;180;0
+Saudi Arabia;8;nombre8;apellido8;0;0;0;0;0;90;0
+Saudi Arabia;9;nombre9;apellido9;1;0;0;0;1;90;0
+Saudi Arabia;10;nombre10;apellido10;0;0;0;0;0;180;0
+Saudi Arabia;11;nombre11;apellido11;0;0;0;0;1;180;0
+Saudi Arabia;12;nombre12;apellido12;0;0;0;0;0;0;0
+Saudi Arabia;13;nombre13;apellido13;0;0;0;0;1;180;0
+Saudi Arabia;14;nombre14;apellido14;0;0;0;0;0;90;0
+Saudi Arabia;15;nombre15;apellido15;0;0;0;0;0;90;0
+Saudi Arabia;16;nombre16;apellido16;0;0;0;0;0;180;0
+Saudi Arabia;17;nombre17;apellido17;0;0;0;0;0;180;0
+Saudi Arabia;18;nombre18;apellido18;0;0;0;0;0;0;0
+Saudi Arabia;19;nombre19;apellido19;0;0;0;0;1;180;0
+Saudi Arabia;20;nombre20;apellido20;0;0;0;0;0;180;0
+Saudi Arabia;21;nombre21;apellido21;0;0;0;0;0;90;0
+Saudi Arabia;22;nombre22;apellido22;0;0;1;0;0;90;0
+Saudi Arabia;23;nombre23;apellido23;0;0;0;0;0;0;0
+Saudi Arabia;24;nombre24;apellido24;0;0;0;0;0;0;0
+Saudi Arabia;25;nombre25;apellido25;0;0;0;0;0;180;0
+Saudi Arabia;26;nombre26;apellido26;0;0;0;0;0;0;0
+Bosnia and Herzegovina;1;nombre1;apellido1;1;0;0;0;0;0;0
+Bosnia and Herzegovina;2;nombre2;apellido2;1;0;0;0;0;90;0
+Bosnia and Herzegovina;3;nombre3;apellido3;1;0;1;0;0;270;0
+Bosnia and Herzegovina;4;nombre4;apellido4;2;0;0;0;1;180;0
+Bosnia and Herzegovina;5;nombre5;apellido5;1;0;0;0;0;0;0
+Bosnia and Herzegovina;6;nombre6;apellido6;2;0;0;0;0;180;0
+Bosnia and Herzegovina;7;nombre7;apellido7;1;0;0;0;0;90;0
+Bosnia and Herzegovina;8;nombre8;apellido8;1;0;0;0;0;0;0
+Bosnia and Herzegovina;9;nombre9;apellido9;1;0;0;0;0;90;0
+Bosnia and Herzegovina;10;nombre10;apellido10;1;0;0;0;0;90;0
+Bosnia and Herzegovina;11;nombre11;apellido11;1;0;0;0;1;90;0
+Bosnia and Herzegovina;12;nombre12;apellido12;0;0;0;0;0;90;0
+Bosnia and Herzegovina;13;nombre13;apellido13;0;0;0;0;0;180;0
+Bosnia and Herzegovina;14;nombre14;apellido14;0;0;0;0;0;180;0
+Bosnia and Herzegovina;15;nombre15;apellido15;0;0;0;0;0;0;0
+Bosnia and Herzegovina;16;nombre16;apellido16;0;0;2;0;0;180;0
+Bosnia and Herzegovina;17;nombre17;apellido17;0;0;0;0;0;90;0
+Bosnia and Herzegovina;18;nombre18;apellido18;0;0;0;0;1;180;0
+Bosnia and Herzegovina;19;nombre19;apellido19;1;0;0;0;0;90;0
+Bosnia and Herzegovina;20;nombre20;apellido20;0;0;1;0;1;270;0
+Bosnia and Herzegovina;21;nombre21;apellido21;0;0;0;0;0;90;0
+Bosnia and Herzegovina;22;nombre22;apellido22;0;0;0;0;0;90;0
+Bosnia and Herzegovina;23;nombre23;apellido23;0;0;0;0;0;180;0
+Bosnia and Herzegovina;24;nombre24;apellido24;0;0;0;0;0;180;0
+Bosnia and Herzegovina;25;nombre25;apellido25;0;0;0;0;0;0;0
+Bosnia and Herzegovina;26;nombre26;apellido26;0;0;0;0;0;90;0
+Iraq;1;nombre1;apellido1;1;0;0;0;0;0;0
+Iraq;2;nombre2;apellido2;1;0;0;0;0;0;0
+Iraq;3;nombre3;apellido3;1;0;0;0;0;90;0
+Iraq;4;nombre4;apellido4;1;0;0;0;1;180;0
+Iraq;5;nombre5;apellido5;1;0;0;0;0;180;0
+Iraq;6;nombre6;apellido6;3;0;0;0;0;180;0
+Iraq;7;nombre7;apellido7;1;0;0;0;0;180;0
+Iraq;8;nombre8;apellido8;0;0;0;0;0;270;0
+Iraq;9;nombre9;apellido9;0;0;0;0;0;0;0
+Iraq;10;nombre10;apellido10;0;0;0;0;0;90;0
+Iraq;11;nombre11;apellido11;0;0;0;0;0;0;0
+Iraq;12;nombre12;apellido12;0;0;0;0;0;90;0
+Iraq;13;nombre13;apellido13;0;0;0;0;0;90;0
+Iraq;14;nombre14;apellido14;0;0;0;0;0;90;0
+Iraq;15;nombre15;apellido15;1;0;0;0;2;180;0
+Iraq;16;nombre16;apellido16;0;0;0;0;0;180;0
+Iraq;17;nombre17;apellido17;0;0;0;0;0;90;0
+Iraq;18;nombre18;apellido18;0;0;0;0;0;0;0
+Iraq;19;nombre19;apellido19;0;0;0;0;1;270;0
+Iraq;20;nombre20;apellido20;0;0;0;0;0;180;0
+Iraq;21;nombre21;apellido21;0;0;0;0;0;90;0
+Iraq;22;nombre22;apellido22;0;0;0;0;1;180;0
+Iraq;23;nombre23;apellido23;0;0;0;0;0;90;0
+Iraq;24;nombre24;apellido24;0;0;0;0;0;0;0
+Iraq;25;nombre25;apellido25;0;0;0;0;0;180;0
+Iraq;26;nombre26;apellido26;1;0;1;0;0;90;0
+Jordan;1;nombre1;apellido1;1;0;0;0;0;90;0
+Jordan;2;nombre2;apellido2;1;0;0;0;0;90;0
+Jordan;3;nombre3;apellido3;1;0;0;0;1;90;0
+Jordan;4;nombre4;apellido4;1;0;0;0;0;90;0
+Jordan;5;nombre5;apellido5;1;0;0;0;0;90;0
+Jordan;6;nombre6;apellido6;1;0;0;0;0;90;0
+Jordan;7;nombre7;apellido7;1;0;0;0;0;0;0
+Jordan;8;nombre8;apellido8;1;0;1;0;1;90;0
+Jordan;9;nombre9;apellido9;1;0;0;0;0;90;0
+Jordan;10;nombre10;apellido10;2;0;0;0;0;90;0
+Jordan;11;nombre11;apellido11;1;0;0;0;1;90;0
+Jordan;12;nombre12;apellido12;1;0;0;0;0;90;0
+Jordan;13;nombre13;apellido13;1;0;0;0;0;90;0
+Jordan;14;nombre14;apellido14;1;0;0;0;0;0;0
+Jordan;15;nombre15;apellido15;1;0;0;0;1;270;0
+Jordan;16;nombre16;apellido16;2;0;0;0;1;270;0
+Jordan;17;nombre17;apellido17;0;0;0;0;0;90;0
+Jordan;18;nombre18;apellido18;1;0;0;0;1;90;0
+Jordan;19;nombre19;apellido19;0;0;1;0;0;180;0
+Jordan;20;nombre20;apellido20;0;0;0;0;1;90;0
+Jordan;21;nombre21;apellido21;0;0;0;0;0;270;0
+Jordan;22;nombre22;apellido22;1;0;0;0;0;180;0
+Jordan;23;nombre23;apellido23;0;0;0;0;0;0;0
+Jordan;24;nombre24;apellido24;0;0;0;0;0;180;0
+Jordan;25;nombre25;apellido25;0;0;0;0;1;90;0
+Jordan;26;nombre26;apellido26;0;0;0;0;1;180;0
+Ghana;1;nombre1;apellido1;2;0;0;0;0;390;0
+Ghana;2;nombre2;apellido2;2;0;0;0;0;450;0
+Ghana;3;nombre3;apellido3;1;0;0;0;0;300;0
+Ghana;4;nombre4;apellido4;1;0;0;0;0;420;0
+Ghana;5;nombre5;apellido5;1;0;0;0;0;330;0
+Ghana;6;nombre6;apellido6;1;0;0;0;0;330;0
+Ghana;7;nombre7;apellido7;1;0;0;0;1;180;0
+Ghana;8;nombre8;apellido8;1;0;0;0;1;240;0
+Ghana;9;nombre9;apellido9;1;0;0;0;0;90;0
+Ghana;10;nombre10;apellido10;1;0;0;0;1;330;0
+Ghana;11;nombre11;apellido11;2;0;0;0;1;300;0
+Ghana;12;nombre12;apellido12;1;0;0;0;1;90;0
+Ghana;13;nombre13;apellido13;1;0;1;0;1;180;0
+Ghana;14;nombre14;apellido14;1;0;0;0;0;0;0
+Ghana;15;nombre15;apellido15;0;0;0;0;0;90;0
+Ghana;16;nombre16;apellido16;0;0;0;0;1;540;0
+Ghana;17;nombre17;apellido17;0;0;0;0;0;330;0
+Ghana;18;nombre18;apellido18;2;0;0;0;0;90;0
+Ghana;19;nombre19;apellido19;2;0;0;0;0;450;0
+Ghana;20;nombre20;apellido20;0;0;0;0;0;0;0
+Ghana;21;nombre21;apellido21;3;0;0;0;0;330;0
+Ghana;22;nombre22;apellido22;0;0;0;0;0;300;0
+Ghana;23;nombre23;apellido23;2;0;0;0;0;420;0
+Ghana;24;nombre24;apellido24;0;0;0;0;2;300;0
+Ghana;25;nombre25;apellido25;0;0;0;0;0;210;0
+Ghana;26;nombre26;apellido26;2;0;0;0;0;240;0
+DR Congo;1;nombre1;apellido1;1;0;0;0;0;90;0
+DR Congo;2;nombre2;apellido2;1;0;0;0;0;270;0
+DR Congo;3;nombre3;apellido3;1;0;0;0;0;0;0
+DR Congo;4;nombre4;apellido4;1;0;0;0;0;90;0
+DR Congo;5;nombre5;apellido5;1;0;0;0;0;90;0
+DR Congo;6;nombre6;apellido6;1;0;0;0;0;0;0
+DR Congo;7;nombre7;apellido7;3;0;0;0;0;180;0
+DR Congo;8;nombre8;apellido8;1;0;0;0;0;0;0
+DR Congo;9;nombre9;apellido9;1;0;0;0;0;90;0
+DR Congo;10;nombre10;apellido10;0;0;0;0;0;180;0
+DR Congo;11;nombre11;apellido11;0;0;0;0;0;90;0
+DR Congo;12;nombre12;apellido12;0;0;1;0;0;180;0
+DR Congo;13;nombre13;apellido13;0;0;0;0;0;90;0
+DR Congo;14;nombre14;apellido14;0;0;0;0;0;90;0
+DR Congo;15;nombre15;apellido15;0;0;0;0;0;90;0
+DR Congo;16;nombre16;apellido16;0;0;1;0;1;90;0
+DR Congo;17;nombre17;apellido17;0;0;0;0;0;180;0
+DR Congo;18;nombre18;apellido18;1;0;0;0;1;180;0
+DR Congo;19;nombre19;apellido19;0;0;0;0;0;180;0
+DR Congo;20;nombre20;apellido20;0;0;0;0;0;90;0
+DR Congo;21;nombre21;apellido21;0;0;0;0;0;180;0
+DR Congo;22;nombre22;apellido22;0;0;0;0;0;0;0
+DR Congo;23;nombre23;apellido23;0;0;0;0;0;180;0
+DR Congo;24;nombre24;apellido24;1;0;0;0;0;90;0
+DR Congo;25;nombre25;apellido25;0;0;0;0;1;90;0
+DR Congo;26;nombre26;apellido26;0;0;0;0;0;180;0
+Haiti;1;nombre1;apellido1;1;0;0;0;0;90;0
+Haiti;2;nombre2;apellido2;1;0;0;0;0;90;0
+Haiti;3;nombre3;apellido3;1;0;0;0;1;270;0
+Haiti;4;nombre4;apellido4;1;0;0;0;0;90;0
+Haiti;5;nombre5;apellido5;1;0;0;0;0;0;0
+Haiti;6;nombre6;apellido6;2;0;0;0;0;180;0
+Haiti;7;nombre7;apellido7;1;0;0;0;0;180;0
+Haiti;8;nombre8;apellido8;1;0;0;0;0;90;0
+Haiti;9;nombre9;apellido9;1;0;0;0;0;0;0
+Haiti;10;nombre10;apellido10;1;0;0;0;0;0;0
+Haiti;11;nombre11;apellido11;0;0;0;0;1;270;0
+Haiti;12;nombre12;apellido12;1;0;0;0;1;180;0
+Haiti;13;nombre13;apellido13;0;0;0;0;0;90;0
+Haiti;14;nombre14;apellido14;0;0;0;0;0;0;0
+Haiti;15;nombre15;apellido15;0;0;0;0;0;180;0
+Haiti;16;nombre16;apellido16;0;0;0;0;0;90;0
+Haiti;17;nombre17;apellido17;0;0;0;0;1;180;0
+Haiti;18;nombre18;apellido18;0;0;0;0;0;0;0
+Haiti;19;nombre19;apellido19;0;0;0;0;0;180;0
+Haiti;20;nombre20;apellido20;0;0;0;0;0;0;0
+Haiti;21;nombre21;apellido21;0;0;0;0;0;90;0
+Haiti;22;nombre22;apellido22;1;0;0;0;1;180;0
+Haiti;23;nombre23;apellido23;0;0;0;0;1;180;0
+Haiti;24;nombre24;apellido24;0;0;0;0;0;90;0
+Haiti;25;nombre25;apellido25;0;0;0;0;1;90;0
+Haiti;26;nombre26;apellido26;0;0;0;0;0;180;0
+New Zealand;1;nombre1;apellido1;1;0;0;0;0;300;0
+New Zealand;2;nombre2;apellido2;1;0;0;0;1;210;0
+New Zealand;3;nombre3;apellido3;1;0;0;0;0;90;0
+New Zealand;4;nombre4;apellido4;1;0;0;0;0;0;0
+New Zealand;5;nombre5;apellido5;1;0;0;0;0;120;0
+New Zealand;6;nombre6;apellido6;1;0;0;0;0;90;0
+New Zealand;7;nombre7;apellido7;1;0;0;0;0;0;0
+New Zealand;8;nombre8;apellido8;0;0;0;0;0;90;0
+New Zealand;9;nombre9;apellido9;0;0;0;0;0;90;0
+New Zealand;10;nombre10;apellido10;2;0;0;0;1;210;0
+New Zealand;11;nombre11;apellido11;0;0;0;0;0;270;0
+New Zealand;12;nombre12;apellido12;0;0;0;0;0;180;0
+New Zealand;13;nombre13;apellido13;0;0;0;0;1;180;0
+New Zealand;14;nombre14;apellido14;0;0;0;0;0;180;0
+New Zealand;15;nombre15;apellido15;0;0;0;0;0;120;0
+New Zealand;16;nombre16;apellido16;0;0;2;0;0;390;0
+New Zealand;17;nombre17;apellido17;0;0;0;0;1;90;0
+New Zealand;18;nombre18;apellido18;0;0;0;0;0;210;0
+New Zealand;19;nombre19;apellido19;2;0;0;0;0;180;0
+New Zealand;20;nombre20;apellido20;2;0;0;0;0;180;0
+New Zealand;21;nombre21;apellido21;0;0;1;0;0;300;0
+New Zealand;22;nombre22;apellido22;1;0;0;0;1;390;0
+New Zealand;23;nombre23;apellido23;0;0;0;0;1;90;0
+New Zealand;24;nombre24;apellido24;0;0;0;0;0;210;0
+New Zealand;25;nombre25;apellido25;0;0;0;0;0;0;0
+New Zealand;26;nombre26;apellido26;0;0;0;0;0;120;0
+Cabo Verde;1;nombre1;apellido1;1;0;0;0;0;0;0
+Cabo Verde;2;nombre2;apellido2;1;0;1;0;0;300;0
+Cabo Verde;3;nombre3;apellido3;1;0;0;0;2;390;0
+Cabo Verde;4;nombre4;apellido4;1;0;0;0;0;390;0
+Cabo Verde;5;nombre5;apellido5;1;0;0;0;0;90;0
+Cabo Verde;6;nombre6;apellido6;1;0;0;0;0;180;0
+Cabo Verde;7;nombre7;apellido7;2;0;0;0;0;120;0
+Cabo Verde;8;nombre8;apellido8;2;0;0;0;1;300;0
+Cabo Verde;9;nombre9;apellido9;1;0;0;0;0;210;0
+Cabo Verde;10;nombre10;apellido10;1;0;1;0;0;90;0
+Cabo Verde;11;nombre11;apellido11;2;0;0;0;0;180;0
+Cabo Verde;12;nombre12;apellido12;0;0;0;0;0;0;0
+Cabo Verde;13;nombre13;apellido13;0;0;0;0;0;120;0
+Cabo Verde;14;nombre14;apellido14;0;0;0;0;0;90;0
+Cabo Verde;15;nombre15;apellido15;0;0;0;0;0;120;0
+Cabo Verde;16;nombre16;apellido16;0;0;0;0;0;180;0
+Cabo Verde;17;nombre17;apellido17;0;0;1;0;0;90;0
+Cabo Verde;18;nombre18;apellido18;0;0;0;0;0;120;0
+Cabo Verde;19;nombre19;apellido19;0;0;0;0;1;270;0
+Cabo Verde;20;nombre20;apellido20;0;0;0;0;0;90;0
+Cabo Verde;21;nombre21;apellido21;0;0;0;0;0;90;0
+Cabo Verde;22;nombre22;apellido22;1;0;0;0;0;90;0
+Cabo Verde;23;nombre23;apellido23;0;0;0;0;0;300;0
+Cabo Verde;24;nombre24;apellido24;0;0;0;0;1;300;0
+Cabo Verde;25;nombre25;apellido25;0;0;0;0;0;90;0
+Cabo Verde;26;nombre26;apellido26;0;0;0;0;0;90;0
